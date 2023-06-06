@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link href="https://static.javatpoint.com/images/favicon2.png" rel="SHORTCUT ICON"/>
+<link href="https://static.javatpoint.com/link.css?v=5.0" rel="stylesheet" type="text/css"/>
+<link href="https://clients1.google.com" rel="dns-prefetch"/><link href="https://static.javatpoint.com" rel="dns-prefetch"/><link href="https://googleads.g.doubleclick.net" rel="dns-prefetch"/><link href="https://www.google.com" rel="dns-prefetch"/><link href="https://feedify.net" rel="dns-prefetch"/>
+<title>Top 50 Machine Learning Interview Questions (2023) - javatpoint</title>
+<meta content="interview questions, interview questions and answers, control systems, comapny interview questions and answers, typescript, java, php, interview, agile, jira, blockchain, react, machine learning, django, hadoop, hibernate, spring, android, companies interview questions, blockchain interview questions, question and answer, python, c, c#, cpp, database, beginners, professionals, basic, frequently, asked" name="keywords">
+<meta content="Get machine learning interview questions with full answers. Machine learning questions to crack interviews in the field of data science and machine learning." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<link href="https://www.javatpoint.com/machine-learning-interview-questions" rel="canonical">
+<meta content="#4CAF50" name="theme-color">
+<meta content="en_US" property="og:locale">
+<meta content="article" property="og:type">
+<meta content="Top 50 Machine Learning Interview Questions (2023) - javatpoint" name="twitter:title" property="og:title"/>
+<meta content="Get machine learning interview questions with full answers. Machine learning questions to crack interviews in the field of data science and machine learning." name="twitter:description" property="og:description"/>
+<meta content="https://www.javatpoint.com/machine-learning-interview-questions" property="og:url"/>
+<meta content="www.javatpoint.com" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@pagejavatpoint" name="twitter:site"/>
+<meta content="www.javatpoint.com" name="twitter:domain"/>
+<meta content="@pagejavatpoint" name="twitter:creator"/>
+<link href="https://www.javatpoint.com/manifest.json" rel="manifest"/>
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/37780/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+</meta></meta></meta></link></meta></head>
+<body onload="highlightlink()">
+<button id="myBtn" onclick="topFunction()">⇧ SCROLL TO TOP</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4">
+<div id="container">
+<div class="header">
+<table style="width:100%;margin-bottom:5px"> <tr> <td> <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img alt="Javatpoint Logo" src="https://static.javatpoint.com/images/logo/jtp_logo.png"/></a> </div> <div style="float:left;width:60%;"><script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> </div> </td> </tr></table>
+</div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input onclick="showmenu()" src="images/menuhome64.png" type="image"/></span>
+<span style="float:left"><a href="https://www.javatpoint.com"><img alt="Javatpoint Logo" src="https://www.javatpoint.com/images/logo/jtp_logo.png"/></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both">
+<form action="https://www.google.com/search" class="navbar-search-m" method="get" target="_blank">
+<input class="search-query span2-m" name="q" placeholder="Search on javatpoint..." title="Search on Javatpoint" type="text"/>
+<input name="sitesearch" type="hidden" value="www.javatpoint.com"/>
+</form>
+</div>
+</div>
+<div id="link" style="clear:both">
+<div class="ddsmoothmenu"><ul>
+<li><a href="https://www.javatpoint.com"><img alt="home" src="https://static.javatpoint.com/images/icon/home.png"> Home</img></a></li>
+<li><a class="selected" href="interview-questions-and-answers"><img alt="interview questions" src="https://static.javatpoint.com/images/icon/interview.png"/> Interview Questions</a></li>
+<li><a href="corejava-interview-questions"><img alt="Java Interview Questions" src="https://static.javatpoint.com/images/icon/java.png"/> Java</a></li>
+<li><a href="sql-interview-questions"><img alt="SQL Interview Questions" src="https://static.javatpoint.com/images/icon/sql.png"/> SQL</a></li>
+<li><a href="python-interview-questions"><img alt="Python Interview Questions" src="https://static.javatpoint.com/images/icon/python.png"/> Python</a></li>
+<li><a href="javascript-interview-questions"><img alt="JavaScript Interview Questions" src="https://static.javatpoint.com/images/icon/js.png"/> JavaScript</a></li>
+<li><a href="top-angular-interview-questions"><img alt="Angular Interview Questions" src="https://static.javatpoint.com/images/icon/angular.png"/> Angular</a></li>
+<li><a href="selenium-interview-questions"><img alt="Selenium Interview Questions" src="https://static.javatpoint.com/images/icon/selenium.png"/> Selenium</a></li>
+<li><a href="spring-boot-interview-questions"><img alt="Spring Boot Interview Questions" src="https://static.javatpoint.com/images/icon/spring-boot.png"/> Spring Boot</a></li>
+<li><a href="job-interview-questions"><img alt="HR Interview Questions" src="https://static.javatpoint.com/images/icon/hr.png"/> HR</a></li>
+<li><a href="c-interview-questions"><img alt="C Interview Questions" src="https://static.javatpoint.com/images/icon/c.png"/> C</a></li>
+<li><a href="data-structure-interview-questions"><img alt="Data Structure Interview Questions" src="https://static.javatpoint.com/images/icon/ds.png"/> Data Structure</a></li>
+<li><a href="dbms-interview-questions"><img alt="DBMS Interview Questions" src="https://static.javatpoint.com/images/icon/dbms.png"/> DBMS</a></li>
+<li><a href="html-interview-questions"><img alt="HTML Interview Questions" src="https://static.javatpoint.com/images/icon/html.png"/> HTML</a></li>
+<li><a href="c-sharp-interview-questions"><img alt="C# Interview Questions" src="https://static.javatpoint.com/images/icon/csharp.png"/> C#</a></li>
+<li><a href="cpp-interview-questions"><img alt="C++ Interview Questions" src="https://static.javatpoint.com/images/icon/cpp.png"/> C++</a></li>
+</ul><br style="clear: left"/></div>
+</div>
+<div class="mobilemenu" style="clear:both">
+</div>
+<div id="menu">
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">All Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="interview-tips"><span>Interview Tips</span></a>
+<a href="job-interview-questions"><span>JOB/HR Interview</span></a>
+<a href="competency-based-interview-questions"><span>Competency Interview</span></a>
+<a href="business-analyst-interview-questions"><span>Business Analyst</span></a>
+<a href="behavioral-interview-questions"><span>Behavioral Interview</span></a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Company Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="company-interview-questions-and-recruitment-process"><span>Company Interview</span></a>
+<a href="ibm-interview-questions"><span>IBM Interview</span></a>
+<a href="infosys-interview-questions"><span>Infosys Interview</span></a>
+<a href="capgemini-interview-questions"><span>Capgemini Interview</span></a>
+<a href="cognizant-interview-questions"><span>Cognizant Interview</span></a>
+<a href="wipro-interview-questions"><span>Wipro Interview</span></a>
+<a href="accenture-interview-questions"><span>Accenture Interview</span></a>
+<a href="igate-interview-questions"><span>iGate Interview</span></a>
+<a href="tcs-interview-questions"><span>TCS Interview</span></a>
+<a href="hcl-interview-questions"><span>HCL Interview</span></a>
+<a href="adobe-interview-questions">Adobe Interview</a>
+<a href="microsoft-interview-questions">Microsoft Interview</a>
+<a href="dxc-technology-interview-questions">DXC Technology Interview</a>
+<a href="ericsson-interview-questions">Ericsson Interview</a>
+<a href="exl-interview-questions">EXL Service Interview</a>
+<a href="indiamart-interview-questions">IndiaMART Interview</a>
+<a href="intuit-interview-questions">Intuit Interview</a>
+<a href="spacex-interview-questions">SpaceX Interview</a>
+<a href="sapient-interview-questions">Sapient Interview</a>
+<a href="amazon-interview-questions">Amazon Interview</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Technical Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="c-interview-questions"><span>C Interview</span></a>
+<a href="cpp-interview-questions"><span>C++ Interview</span></a>
+<a href="data-structure-interview-questions"><span>Data Structure Interview</span></a>
+<a href="linux-interview-questions"><span>Linux Interview</span></a>
+<a href="unix-interview-questions"><span>Unix Interview</span></a>
+<a href="shell-scripting-interview-questions"><span>Shell Scripting</span></a>
+<a href="networking-interview-questions"><span>Networking Interview</span></a>
+<a href="ccna-interview-questions"><span>CCNA Interview</span></a>
+<a href="android-interview-questions"><span>Android Interview</span></a>
+<a href="cloud-computing-interview-questions"><span>Cloud Computing</span></a>
+<a href="hadoop-interview-questions"><span>Hadoop Interview</span></a>
+<a href="software-testing-interview-questions"><span>Testing/QTP Interview</span></a>
+<a href="selenium-interview-questions"><span>Selenium Interview</span></a>
+<a href="web-services-interview-questions"><span>Web Services Interview</span></a>
+<a href="operating-system-interview-questions"><span>OS Interview</span></a>
+<a href="excel-interview-questions"><span>Excel Interview</span></a>
+<a href="seo-interview-questions"><span>SEO Interview</span></a>
+<a href="digital-marketing-interview-questions-and-answers"><span>Digital Marketing</span></a>
+<a href="python-interview-questions"><span>Python Interview</span></a>
+<a href="django-interview-questions-and-answers"><span>Django Interview</span></a>
+<a href="pascal-interview-questions-and-answers"><span>Pascal Interview</span></a>
+<a href="ruby-interview-questions"><span>Ruby Interview</span></a>
+<a href="ruby-on-rails-interview-questions"><span>Ruby on Rails Interview</span></a>
+<a href="memcached-interview-questions-and-answers"><span>Memcached Interview</span></a>
+<a href="go-programming-interview-questions"><span>Go Interview</span></a>
+<a href="openstack-interview-questions-and-answers"><span>OpenStack Interview</span></a>
+<a href="scala-interview-questions"><span>Scala Interview</span></a>
+<a href="control-systems-interview-questions"><span>Control Systems</span></a>
+<a href="electrical-machines-interview-questions"><span>Electrical Machines</span></a>
+<a href="power-system-interview-questions"><span>Power System</span></a>
+<a href="digital-electronics-interview-questions"><span>Digital Electronics</span></a>
+<a href="robotics-interview-questions">Robotics Interview</a>
+<a href="typescript-interview-questions">TypeScript Interview</a>
+<a href="swift-interview-questions">Swift Interview</a>
+<a href="blockchain-interview-questions">Blockchain Interview</a>
+<a href="bitcoin-interview-questions">Bitcoin Interview</a>
+<a href="aws-interview-questions">AWS Interview</a>
+<a href="informatica-interview-questions">Informatica Interview</a>
+<a href="qa-interview-questions">QA Interview</a>
+<a href="react-interview-questions">React Interview</a>
+<a href="git-interview-questions">GIT Interview</a>
+<a href="j2ee-interview-questions">J2EE Interview</a>
+<a href="deep-learning-interview-questions">Deep Learning</a>
+<a href="salesforce-interview-questions">Salesforce Interview</a>
+<a href="testng-interview-questions">TestNG Interview</a>
+<a href="agile-interview-questions">Agile Interview</a>
+<a href="machine-learning-interview-questions">Machine Learning</a>
+<a href="api-testing-interview-questions">API Testing</a>
+<a href="algorithm-interview-questions">Algorithm</a>
+<a href="java-design-pattern-interview-questions">Java Design Pattern</a>
+<a href="teradata-interview-questions">Teradata</a>
+<a href="tensorflow-interview-questions">TensorFlow</a>
+<a href="linq-interview-questions">LINQ</a>
+<a href="mainframe-interview-questions">Mainframe</a>
+<a href="laravel-interview-questions">Laravel</a>
+<a href="jira-interview-questions">JIRA</a>
+<a href="jcl-interview-questions">JCL</a>
+<a href="pytorch-interview-questions">Pytorch</a>
+<a href="etl-testing-interview-questions">ETL Testing</a>
+<a href="linked-list-interview-questions">Linked List</a>
+<a href="datastage-interview-questions">DataStage</a>
+<a href="tableau-interview-questions">Tableau</a>
+<a href="sap-abap-interview-questions">SAP ABAP</a>
+<a href="daa-interview-questions">DAA</a>
+<a href="computer-graphics-interview-questions">Computer Graphics</a>
+<a href="data-science-interview-questions">Data Science</a>
+<a href="software-engineering-interview-questions">Software Engineering</a>
+<a href="power-bi-interview-questions">Power BI</a>
+<a href="xamarin-interview-questions">Xamarin</a>
+<a href="ansible-interview-questions">Ansible</a>
+<a href="data-warehouse-interview-questions">Data Warehouse</a>
+<a href="ionic-interview-questions">Ionic</a>
+<a href="devops-interview-questions">Devops</a>
+<a href="react-native-interview-questions">React Native</a>
+<a href="python-pandas-interview-questions">Python Pandas</a>
+<a href="http-interview-questions">HTTP Interview</a>
+<a href="kali-linux-interview-questions">Kali Linux Interview</a>
+<a href="powershell-interview-questions">PowerShell Interview</a>
+<a href="sharepoint-interview-questions">SharePoint Interview</a>
+<a href="talend-interview-questions">Talend Interview</a>
+<a href="microsoft-azure-interview-questions">Microsoft Azure Interview</a>
+<a href="r-interview-questions">R Interview</a>
+<a href="flutter-interview-questions">Flutter Interview</a>
+<a href="matlab-interview-questions">MATLAB Interview</a>
+<a href="es6-interview-questions">ES6 Interview</a>
+<a href="rpa-interview-questions">RPA Interview</a>
+<a href="desktop-support-interview-questions">Desktop Support Interview</a>
+<a href="angular-8-interview-questions">Angular 8 Interview</a>
+<a href="graphql-interview-questions">GraphQL Interview</a>
+<a href="vue-js-interview-questions">Vue.js Interview</a>
+<a href="automation-anywhere-interview-questions">Automation Anywhere Interview</a>
+<a href="artificial-intelligence-interview-questions">AI Interview</a>
+<a href="uipath-interview-questions">UiPath Interview</a>
+<a href="blue-prism-interview-questions">Blue Prism Interview</a>
+<a href="ssis-interview-questions">SSIS Interview</a>
+<a href="mobile-computing-interview-questions">Mobile Computing Interview</a>
+<a href="itil-interview-questions">ITIL Interview</a>
+<a href="sas-interview-questions">SAS Interview</a>
+<a href="elasticsearch-interview-questions">Elasticsearch Interview</a>
+<a href="entity-framework-interview-questions">Entity Framework Interview</a>
+<a href="rxjs-interview-questions">RxJS Interview</a>
+<a href="accounting-interview-questions">Accounting Interview</a>
+<a href="electronjs-interview-questions">Electron.js Interview</a>
+<a href="knockout-js-interview-questions">Knockout JS Interview</a>
+<a href="top-angular-interview-questions">Top Angular Interview</a>
+<a href="ias-interview-questions">IAS Interview Question</a>
+<a href="banking-interview-questions">Banking Interview</a>
+<a href="interview-questions-for-freshers">Interview Questions for Freshers</a>
+<a href="powerpoint-interview-questions">PowerPoint Interview</a>
+<a href="bpo-interview-questions">BPO Interview</a>
+<a href="civil-engineering-interview-questions">Civil Engineering Interview</a>
+<a href="apache-spark-interview-questions">Apache Spark Interview</a>
+<a href="data-mining-interview-questions">Data Mining Interview</a>
+<a href="java-support-interview-questions">Java Support Interview</a>
+<a href="kubernetes-interview-questions">Kubernetes Interview</a>
+<a href="web-api-interview-questions">Web API Interview</a>
+<a href="scrum-master-interview-questions">Scrum Master Interview</a>
+<a href="system-design-interview-questions">System Design Interview</a>
+<a href="ssb-interview-questions">SSB Interview Questions</a>
+<a href="teachers-interview-questions">Teachers Interview Questions</a>
+<a href="finance-interview-questions">Finance Interview Questions</a>
+<a href="technical-support-interview-questions">Technical Support Interview</a>
+<a href="active-directory-interview-questions">Active Directory Interview</a>
+<a href="appium-interview-questions">Appium Interview</a>
+<a href="cucumber-interview-questions">Cucumber Interview</a>
+<a href="full-stack-developer-interview-questions-java">Full-Stack Developer</a>
+<a href="servicenow-interview-questions">ServiceNow Interview</a>
+<a href="nursing-interview-questions">Nursing Interview</a>
+<a href="sales-interview-questions">Sales Interview</a>
+<a href="microservices-interview-questions">Microservices Interview</a>
+<a href="electrical-engineering-interview-questions">Electrical Engineering Interview</a>
+<a href="accounts-payable-interview-questions">Accounts Payable Interview</a>
+<a href="visa-interview-questions">VISA Interview</a>
+<a href="vlsi-interview-questions">VLSI Interview</a>
+<a href="autocad-interview-questions">AutoCAD Interview</a>
+<a href="verilog-interview-questions">Verilog Interview</a>
+<a href="oops-interview-questions">OOPs Interview</a>
+<a href="web-developer-interview-questions">Web Developer Interview</a>
+<a href="expressjs-interview-questions">Express.js Interview</a>
+<a href="cakephp-interview-questions">CakePHP Interview</a>
+<a href="yii-interview-questions">Yii Interview</a>
+<a href="zend-framework-interview-questions">Zend Framework Interview</a>
+<a href="java-concurrency-interview-questions">Java Concurrency Interview</a>
+<a href="symfony-interview-questions">Symfony Interview</a>
+<a href="basic-interview-questions">Basic Interview</a>
+<a href="dynamic-programming-interview-questions">Dynamic Programming Interview</a>
+<a href="programming-interview-questions">Programming Interview</a>
+<a href="next-js-interview-questions">Next.js Interview</a>
+<a href="microsoft-java-interview-questions">Microsoft Java Interview</a>
+<a href="aem-tnterview-questions">AEM Interview</a>
+<a href="sveltejs-tnterview-questions">Svelte.js Interview</a>
+<a href="cobol-tnterview-questions">COBOL Interview</a>
+<a href="cyber-security-tnterview-questions">Cyber Security Interview</a>
+<a href="sql-query-interview-questions">SQL Query Interview</a>
+<a href="bgp-interview-questions">BGP Interview</a>
+<a href="apache-hive-interview-questions">Apache Hive Interview</a>
+<a href="kafka-interview-questions">Kafka Interview</a>
+<a href="embedded-c-interview-questions">Embedded C Interview</a>
+<a href="pega-interview-questions">Pega Interview</a>
+<a href="kotlin-interview-questions">Kotlin Interview</a>
+<a href="sap-mm-interview-questions">SAP MM Interview</a>
+<a href="ospf-interview-questions">OSPF Interview</a>
+<a href="mobile-testing-interview-questions">Mobile Testing Interview</a>
+<a href="mulesoft-interview-questions">Mulesoft Interview</a>
+<a href="terraform-interview-questions">Terraform Interview</a>
+<a href="salesforce-lightning-interview-questions">Salesforce Lightning Interview</a>
+<a href="sccm-interview-questions">SCCM Interview</a>
+<a href="postman-interview-questions">Postman Interview</a>
+<a href="content-writer-interview-questions">Content Writer Interview</a>
+<a href="iot-interview-questions">IoT Interview</a>
+<a href="nlp-interview-questions">NLP Interview</a>
+<a href="splunk-interview-questions">Splunk Interview</a>
+<a href="postgresql-interview-questions">PostgreSQL Interview</a>
+<a href="tricky-java-interview-questions">Tricky Java Interview</a>
+<a href="pyspark-interview-questions">PySpark Interview</a>
+<a href="vba-interview-questions">VBA Interview</a>
+<a href="front-end-developer-interview-questions">Front End Developer Interview</a>
+<a href="computer-science-interview-questions">Computer Science Interview</a>
+<a href="data-modeling-interview-questions">Data Modeling Interview</a>
+<a href="google-analytics-interview-questions">Google Analytics Interview</a>
+<a href="sqoop-interview-questions">Sqoop Interview</a>
+<a href="statistics-interview-questions">Statistics Interview</a>
+<a href="tally-interview-questions">Tally Interview</a>
+<a href="cics-interview-questions">CICS Interview</a>
+<a href="chemistry-interview-questions">Chemistry Interview</a>
+<a href="data-engineer-interview-questions">Data Engineer Interview</a>
+<a href="azure-data-factory-interview-questions">Azure Data Factory Interview</a>
+<a href="insurance-interview-questions">Insurance Interview</a>
+<a href="iis-interview-questions">IIS Interview</a>
+<a href="ms-word-interview-questions">MS Word Interview</a>
+<a href="sdet-interview-questions">SDET Interview</a>
+<a href="weblogic-interview-questions">Weblogic Interview</a>
+<a href="php-oops-interview-questions">PHP OOPs Interview</a>
+<a href="checkpoint-interview-questions">Checkpoint Interview</a>
+<a href="python-coding-interview-questions">Python Coding Interview</a>
+<a href="java-garbage-collection-interview-questions">Garbage Collection Interview</a>
+<a href="python-interview-questions-for-five-years-experienced">Python Interview Questions for Five Years Experienced</a>
+<a href="linkedin-python-2022-qualifying-assessment-answers">LinkedIn Python 2022 Qualifying Assessment Answers</a>
+<a href="top-coding-interview-questions-on-arrays-c">Top Coding Interview Questions on Arrays-C</a>
+<a href="computer-network-viva-questions">Computer Network Viva Questions</a>
+<a href="java-8-multithreading-interview-questions">Java 8 Multithreading Interview Questions</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Web Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="html-interview-questions"><span>HTML Interview</span></a>
+<a href="css-interview-questions"><span>CSS Interview</span></a>
+<a href="javascript-interview-questions"><span>JavaScript Interview</span></a>
+<a href="jquery-interview-questions"><span>jQuery Interview</span></a>
+<a href="angularjs-interview-questions"><span>AngularJS Interview</span></a>
+<a href="angular-interview-questions">Angular Interview</a>
+<a href="angular-7-interview-questions">Angular 7 Interview</a>
+<a href="node-js-interview-questions"><span>Node.js Interview</span></a>
+<a href="ajax-interview-questions"><span>AJAX Interview</span></a>
+<a href="xml-interview-questions"><span>XML Interview</span></a>
+<a href="dojo-interview-questions-and-answers"><span>Dojo Interview</span></a>
+<a href="backbone-js-interview-questions-and-answers"><span>Backbone.js Interview</span></a>
+<a href="ember-js-interview-questions"><span>Ember.js Interview</span></a>
+<a href="xhtml-interview-questions"><span>XHTML Interview</span></a>
+<a href="xslt-interview-questions"><span>XSLT Interview</span></a>
+<a href="xpath-interview-questions"><span>XPath Interview</span></a>
+<a href="xquery-interview-questions"><span>XQuery Interview</span></a>
+<a href="xforms-interview-questions"><span>XForms Interview</span></a>
+<a href="sass-interview-questions-and-answers"><span>SASS Interview</span></a>
+<a href="coffeescript-interview-questions-and-answers"><span>CoffeeScript Interview</span></a>
+<a href="less-interview-questions-and-answers"><span>LESS Interview</span></a>
+<a href="perl-interview-questions"><span>Perl Interview</span></a>
+<a href="pure-css-interview-questions"><span>Pure.CSS Interview</span></a>
+<a href="materialize-css-interview-questions"><span>Materialize Interview</span></a>
+<a href="framework7-interview-questions"><span>Framework7 Interview</span></a>
+<a href="svg-interview-questions"><span>SVG Interview</span></a>
+<a href="sap-fico-interview-questions">SAP FICO Interview</a>
+<a href="ab-initio-interview-questions">Ab Initio Interview</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">PHP Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="php-interview-questions"><span>PHP Interview</span></a>
+<a href="wordpress-interview-questions"><span>Wordpress Interview</span></a>
+<a href="joomla-interview-questions-and-answers"><span>Joomla Interview</span></a>
+<a href="drupal-interview-questions-and-answers"><span>Drupal Interview</span></a>
+<a href="magento-interview-questions-and-answers"><span>Magento Interview</span></a>
+<a href="codeigniter-interview-questions-and-answers"><span>CodeIgniter Interview</span></a>
+<a href="phalcon-interview-questions"><span>Phalcon Interview</span></a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">.Net Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="dot-net-interview-questions"><span>.Net Interview</span></a>
+<a href="c-sharp-interview-questions"><span>C# Interview</span></a>
+<a href="asp-dot-net-interview-questions"><span>ASP.NET Interview</span></a>
+<a href="ado-dot-net-interview-questions"><span>ADO.NET Interview</span></a>
+<a href="wcf-interview-questions"><span>WCF Interview</span></a>
+<a href="wpf-interview-questions"><span>WPF Interview</span></a>
+<a href="silverlight-interview-questions-and-answers"><span>Silverlight Interview</span></a>
+<a href="fsharp-interview-questions"><span>F# Interview</span></a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Java Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="corejava-interview-questions"><span>Java 1 Interview</span></a>
+<a href="corejava-interview-questions-2"><span>Java 2 Interview</span></a>
+<a href="java-multithreading-interview-questions"><span>Multithreading </span></a>
+<a href="java-collections-interview-questions"><span>Collections Interview</span></a>
+<a href="jdbc-interview-questions"><span>JDBC Interview</span></a>
+<a href="servletinterview"><span>Servlet Interview</span></a>
+<a href="jspinterview"><span>JSP Interview</span></a>
+<a href="ejb-interview-questions"><span>EJB Interview</span></a>
+<a href="struts-interview-questions"><span>Struts Interview</span></a>
+<a href="hibernate-interview-questions"><span>Hibernate Interview</span></a>
+<a href="spring-interview-questions"><span>Spring Interview</span></a>
+<a href="spring-boot-interview-questions"><span>Spring Boot Interview</span></a>
+<a href="spring-mvc-interview-questions"><span>Spring MVC Interview</span></a>
+<a href="jpa-interview-questions"><span>JPA Interview</span></a>
+<a href="maven-interview-questions"><span>Maven Interview</span></a>
+<a href="junit-interview-questions"><span>JUnit Interview</span></a>
+<a href="jsf-interview-questions"><span>JSF Interview</span></a>
+<a href="primefaces-interview-questions"><span>PrimeFaces Interview</span></a>
+<a href="richfaces-interview-questions"><span>RichFaces Interview</span></a>
+<a href="gwt-interview-questions"><span>GWT Interview</span></a>
+<a href="jdb-interview-questions"><span>JDB Interview</span></a>
+<a href="jogl-interview-questions"><span>JOGL Interview</span></a>
+<a href="jbpm-interview-questions"><span>jBPM Interview</span></a>
+<a href="jenkins-interview-questions"><span>Jenkins Interview</span></a>
+<a href="java-constructor-interview-questions">Java Constructor Interview</a>
+<a href="java-technical-architect-interview-questions">Technical Architect Interview</a>
+<a href="array-interview-questions-in-java">Array Interview Questions</a>
+<a href="java-generics-questions">Java Generics Questions</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Database Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="dbms-interview-questions"><span>DBMS Interview</span></a>
+<a href="sql-interview-questions"><span>SQL Interview</span></a>
+<a href="pl-sql-interview-questions"><span>PL/SQL Interview</span></a>
+<a href="oracle-interview-questions"><span>Oracle Interview</span></a>
+<a href="mysql-interview-questions"><span>MySql Interview</span></a>
+<a href="sql-server-interview-questions"><span>SQL Server Interview</span></a>
+<a href="mongodb-interview-questions"><span>MongoDB Interview</span></a>
+<a href="cassandra-interview-questions-and-answers"><span>Cassandra Interview</span></a>
+<a href="db2-interview-questions-and-answers"><span>DB2 Interview</span></a>
+<a href="microsoft-access-interview-questions-and-answers"><span>Access Interview</span></a>
+<a href="sqlite-interview-questions"><span>SQLite Interview</span></a>
+<a href="couchdb-interview-questions"><span>CouchDB Interview</span></a>
+<a href="neo4j-interview-questions-and-answers"><span>Neo4j Interview</span></a>
+<a href="mariadb-interview-questions"><span>MariaDB Interview</span></a>
+<a href="pouchdb-interview-questions"><span>PouchDB Interview</span></a>
+<a href="redis-interview-questions-and-answers"><span>Redis Interview</span></a>
+</div>
+<table id="leftad">
+<tr><td>
+<img alt="space" src="images/wh.JPG"/>
+</td></tr>
+<tr><td>
+<ins class="adPushupAds" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBqYXZhdHBvaW50bGVmdCAtLT4KPGlucyBjbGFzcz0iYWRzYnlnb29nbGUiCiAgICAgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrO3dpZHRoOjE2MHB4O2hlaWdodDo2MDBweCIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI0NDc2NDAxMjIyIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+" data-adpcontrol="g8drp" data-siteid="37780" data-ver="2"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+<br/><br/>
+</td></tr>
+</table>
+</div>
+<div class="onlycontent">
+<div class="onlycontentad">
+</div>
+<div id="city">
+<table>
+<tr><td>
+<h1 class="h1">Machine Learning Interview Questions</h1>
+<img alt="Machine Learning Interview Questions" class="imageright" src="https://static.javatpoint.com/interview/images/machine-learning-interview-questions.png"/>
+<p>A list of frequently asked <strong>machine learning interview questions and answers</strong> are given below.</p>
+<h3 class="h3">1) What do you understand by Machine learning?</h3>
+<p>Machine learning is the form of Artificial Intelligence that deals with system programming and automates data analysis to enable computers to learn and act through experiences without being explicitly programmed.</p>
+<p><strong>For example</strong>, Robots are coded in such a way that they can perform the tasks based on data they collect from sensors. They automatically learn programs from data and improve with experiences.
+</p>
+<hr/>
+<h3 class="h3">2) Differentiate between inductive learning and deductive learning?</h3>
+<p>In inductive learning, the model learns by examples from a set of observed instances to draw a generalized conclusion. On the other side, in deductive learning, the model first applies the conclusion, and then the conclusion is drawn.</p>
+<ul class="points">
+<li>Inductive learning is the method of using observations to draw conclusions.</li>
+<li>Deductive learning is the method of using conclusions to form observations.</li>
+</ul>
+<p><strong>For example</strong>, if we have to explain to a kid that playing with fire can cause burns. There are two ways we can explain this to a kid; we can show training examples of various fire accidents or images of burnt people and label them as "Hazardous". In this case, a kid will understand with the help of examples and not play with the fire. It is the form of Inductive machine learning. The other way to teach the same thing is to let the kid play with the fire and wait to see what happens. If the kid gets a burn, it will teach the kid not to play with fire and avoid going near it. It is the form of deductive learning.</p>
+<hr/>
+<h3 class="h3">3) What is the difference between Data Mining and Machine Learning?</h3>
+<p><strong>Data mining</strong> can be described as the process in which the structured data tries to abstract knowledge or interesting unknown patterns. During this process, machine learning algorithms are used.</p>
+<p><strong>Machine learning</strong> represents the study, design, and development of the algorithms which provide the ability to the processors to learn without being explicitly programmed.</p>
+<hr/>
+<h3 class="h3">4) What is the meaning of Overfitting in Machine learning?</h3>
+<p>Overfitting can be seen in machine learning when a statistical model describes random error or noise instead of the underlying relationship. Overfitting is usually observed when a model is excessively complex. It happens because of having too many parameters concerning the number of training data types. The model displays poor performance, which has been overfitted.</p>
+<hr/>
+<h3 class="h3">5) Why overfitting occurs?</h3>
+<p>The possibility of overfitting occurs when the criteria used for training the model is not as per the criteria used to judge the efficiency of a model.</p>
+<hr/>
+<h3 class="h3">6) What is the method to avoid overfitting?</h3>
+<p>Overfitting occurs when we have a small dataset, and a model is trying to learn from it. By using a large amount of data, overfitting can be avoided. But if we have a small database and are forced to build a model based on that, then we can use a technique known as <strong>cross-validation</strong>. In this method, a model is usually given a dataset of a known data on which training data set is run and dataset of unknown data against which the model is tested. The primary aim of cross-validation is to define a dataset to "test" the model in the training phase. If there is sufficient data, '<strong>Isotonic Regression</strong>' is used to prevent overfitting.</p>
+<hr/>
+<h3 class="h3">7) Differentiate supervised and unsupervised machine learning.</h3>
+<ul class="points">
+<li>In supervised machine learning, the machine is trained using labeled data. Then a new dataset is given into the learning model so that the algorithm provides a positive outcome by analyzing the labeled data. For example, we first require to label the data which is necessary to train the model while performing classification.</li>
+<li>In the unsupervised machine learning, the machine is not trained using labeled data and let the algorithms make the decisions without any corresponding output variables.</li>
+</ul>
+<hr/>
+<h3 class="h3">8) How does Machine Learning differ from Deep Learning?</h3>
+<ul class="points">
+<li>Machine learning is all about algorithms which are used to parse data, learn from that data, and then apply whatever they have learned to make informed decisions.</li>
+<li>Deep learning is a part of machine learning, which is inspired by the structure of the human brain and is particularly useful in feature detection.</li>
+</ul>
+<hr/>
+<h3 class="h3">9) How is KNN different from k-means?</h3>
+<p>KNN or K nearest neighbors is a supervised algorithm which is used for classification purpose. In KNN, a test sample is given as the class of the majority of its nearest neighbors. On the other side, K-means is an unsupervised algorithm which is mainly used for clustering. In k-means clustering, it needs a set of unlabeled points and a threshold only. The algorithm further takes unlabeled data and learns how to cluster it into groups by computing the mean of the distance between different unlabeled points.</p>
+<hr/>
+<h3 class="h3">10) What are the different types of Algorithm methods in Machine Learning?</h3>
+<p>The different types of algorithm methods in machine earning are:</p>
+<ul class="points">
+<li>Supervised Learning</li>
+<li>Semi-supervised Learning</li>
+<li>Unsupervised Learning</li>
+<li>Transduction</li>
+<li>Reinforcement Learning</li>
+</ul>
+<hr/>
+<h3 class="h3">11) What do you understand by Reinforcement Learning technique?</h3>
+<p>Reinforcement learning is an algorithm technique used in Machine Learning. It involves an agent that interacts with its environment by producing actions &amp; discovering errors or rewards. Reinforcement learning is employed by different software and machines to search for the best suitable behavior or path it should follow in a specific situation. It usually learns on the basis of reward or penalty given for every action it performs.</p>
+<hr/>
+<h3 class="h3">12) What is the trade-off between bias and variance?</h3>
+<p>Both bias and variance are errors. Bias is an error due to erroneous or overly simplistic assumptions in the learning algorithm. It can lead to the model under-fitting the data, making it hard to have high predictive accuracy and generalize the knowledge from the training set to the test set.</p>
+<p>Variance is an error due to too much complexity in the learning algorithm. It leads to the algorithm being highly sensitive to high degrees of variation in the training data, which can lead the model to overfit the data.</p>
+<p>To optimally reduce the number of errors, we will need to tradeoff bias and variance.</p>
+<hr/>
+<h3 class="h3">13) How do classification and regression differ?</h3>
+<table class="alt">
+<tr>
+<th>Classification</th>
+<th>Regression</th>
+</tr>
+<tr>
+<td><ul class="points">
+<li>Classification is the task to predict a discrete class label.</li>
+</ul></td>
+<td><ul class="points">
+<li>Regression is the task to predict a continuous quantity.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>In a classification problem, data is labeled into one of two or more classes.</li>
+</ul></td>
+<td><ul class="points">
+<li>A regression problem needs the prediction of a quantity.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>A classification having problem with two classes is called binary classification, and more than two classes is called multi-class classification</li>
+</ul></td>
+<td><ul class="points">
+<li>A regression problem containing multiple input variables is called a multivariate regression problem.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>Classifying an email as spam or non-spam is an example of a classification problem.</li>
+</ul></td>
+<td><ul class="points">
+<li>Predicting the price of a stock over a period of time is a regression problem.</li></ul></td>
+</tr>
+</table>
+<hr/>
+<h3 class="h3">14) What are the five popular algorithms we use in Machine Learning?</h3>
+<p>Five popular algorithms are:</p>
+<ul class="points">
+<li>Decision Trees</li>
+<li>Probabilistic Networks</li>
+<li>Neural Networks</li>
+<li>Support Vector Machines</li>
+<li>Nearest Neighbor</li>
+</ul>
+<hr/>
+<h3 class="h3">15) What do you mean by ensemble learning?</h3>
+<p>Numerous models, such as classifiers are strategically made and combined to solve a specific computational program which is known as ensemble learning. The ensemble methods are also known as committee-based learning or learning multiple classifier systems. It trains various hypotheses to fix the same issue. One of the most suitable examples of ensemble modeling is the random forest trees where several decision trees are used to predict outcomes. It is used to improve the classification, function approximation, prediction, etc. of a model.</p>
+<hr/>
+<h3 class="h3">16) What is a model selection in Machine Learning?</h3>
+<p>The process of choosing models among diverse mathematical models, which are used to define the same data is known as <strong>Model Selection</strong>. Model learning is applied to the fields of <strong>statistics</strong>, <strong>data mining</strong>, and <strong>machine learning</strong>.</p>
+<hr/>
+<h3 class="h3">17) What are the three stages of building the hypotheses or model in machine learning?</h3>
+<p>There are three stages to build hypotheses or model in machine learning:</p>
+<ul class="points">
+<li><strong>Model building</strong><br/>
+It chooses a suitable algorithm for the model and trains it according to the requirement of the problem.</li>
+<li><strong>Applying the model</strong><br/>
+It is responsible for checking the accuracy of the model through the test data.</li>
+<li><strong>Model testing</strong><br/>
+It performs the required changes after testing and apply the final model.</li>
+</ul>
+<hr/>
+<h3 class="h3">18) What according to you, is the standard approach to supervised learning?</h3>
+<p>In supervised learning, the standard approach is to split the set of example into the training set and the test.</p>
+<hr/>
+<h3 class="h3">19) Describe 'Training set' and 'training Test'.</h3>
+<p>In various areas of information of machine learning, a set of data is used to discover the potentially predictive relationship, which is known as 'Training Set'. The training set is an example that is given to the learner. Besides, the 'Test set' is used to test the accuracy of the hypotheses generated by the learner. It is the set of instances held back from the learner. Thus, the training set is distinct from the test set.</p>
+<hr/>
+<h3 class="h3">20) What are the common ways to handle missing data in a dataset?</h3>
+<p>Missing data is one of the standard factors while working with data and handling. It is considered as one of the greatest challenges faced by the data analysts. There are many ways one can impute the missing values. Some of the common methods to handle missing data in datasets can be defined as <strong>deleting the rows, replacing with mean/median/mode, predicting the missing values, assigning a unique category, using algorithms that support missing values</strong>, etc.</p>
+<hr/>
+<h3 class="h3">21) What do you understand by ILP?</h3>
+<p>ILP stands for <strong>Inductive Logic Programming</strong>. It is a part of machine learning which uses logic programming. It aims at searching patterns in data which can be used to build predictive models. In this process, the logic programs are assumed as a hypothesis.</p>
+<hr/>
+<h3 class="h3">22) What are the necessary steps involved in Machine Learning Project?</h3>
+<p>There are several essential steps we must follow to achieve a good working model while doing a Machine Learning Project. Those steps may include <strong>parameter tuning, data preparation, data collection, training the model, model evaluation, and prediction</strong>, etc.</p>
+<hr/>
+<h3 class="h3">23) Describe Precision and Recall?</h3>
+<p>Precision and Recall both are the measures which are used in the information retrieval domain to measure how good an information retrieval system reclaims the related data as requested by the user.</p>
+<p><strong>Precision</strong> can be said as a positive predictive value. It is the fraction of relevant instances among the received instances.</p>
+<p>On the other side, <strong>recall</strong> is the fraction of relevant instances that have been retrieved over the total amount or relevant instances. The recall is also known as <strong>sensitivity</strong>.</p>
+<hr/>
+<h3 class="h3">24) What do you understand by Decision Tree in Machine Learning?</h3>
+<p>Decision Trees can be defined as the Supervised Machine Learning, where the data is continuously split according to a certain parameter. It builds classification or regression models as similar as a tree structure, with datasets broken up into ever smaller subsets while developing the decision tree. The tree can be defined by two entities, namely <strong>decision nodes</strong>, and <strong>leaves</strong>. The leaves are the decisions or the outcomes, and the decision nodes are where the data is split. Decision trees can manage both categorical and numerical data.</p>
+<hr/>
+<h3 class="h3">25) What are the functions of Supervised Learning?</h3>
+<ul class="points">
+<li>Classification</li>
+<li>Speech Recognition</li>
+<li>Regression</li>
+<li>Predict Time Series</li>
+<li>Annotate Strings</li>
+</ul>
+<hr/>
+<h3 class="h3">26) What are the functions of Unsupervised Learning?</h3>
+<ul class="points">
+<li>Finding clusters of the data</li>
+<li>Finding low-dimensional representations of the data</li>
+<li>Finding interesting directions in data</li>
+<li>Finding novel observations/ database cleaning</li>
+<li>Finding interesting coordinates and correlations</li>
+</ul>
+<hr/>
+<h3 class="h3">27) What do you understand by algorithm independent machine learning?</h3>
+<p>Algorithm independent machine learning can be defined as machine learning, where mathematical foundations are independent of any particular classifier or learning algorithm.</p>
+<hr/>
+<h3 class="h3">28) Describe the classifier in machine learning.</h3>
+<p>A classifier is a case of a hypothesis or discrete-valued function which is used to assign class labels to particular data points. It is a system that inputs a vector of discrete or continuous feature values and outputs a single discrete value, the class.</p>
+<hr/>
+<h3 class="h3">29) What do you mean by Genetic Programming?</h3>
+<p><strong>Genetic Programming (GP)</strong> is almost similar to an <strong>Evolutionary Algorithm</strong>, a subset of machine learning. Genetic programming software systems implement an algorithm that uses random mutation, a fitness function, crossover, and multiple generations of evolution to resolve a user-defined task. The genetic programming model is based on testing and choosing the best option among a set of results.</p>
+<hr/>
+<h3 class="h3">30) What is SVM in machine learning? What are the classification methods that SVM can handle?</h3>
+<p>SVM stands for <strong>Support Vector Machine</strong>. SVM are supervised learning models with an associated learning algorithm which analyze the data used for classification and regression analysis.</p>
+<p>The classification methods that SVM can handle are:</p>
+<ul class="points">
+<li>Combining binary classifiers</li>
+<li>Modifying binary to incorporate multiclass learning</li>
+</ul>
+<hr/>
+<h3 class="h3">31) How will you explain a linked list and an array?</h3>
+<p>An array is a datatype which is widely implemented as a default type, in almost all the modern programming languages. It is used to store data of a similar type.</p>
+<p>But there are many use-cases where we don't know the quantity of data to be stored. For such cases, advanced data structures are required, and one such data structure is <strong>linked list</strong>.</p>
+<p>There are some points which explain how the linked list is different from an array:</p>
+<table class="alt">
+<tr>
+<th>ARRAY</th>
+<th>LINKED LIST</th>
+</tr>
+<tr>
+<td><ul class="points">
+<li>An array is a group of elements of a similar data type.</li></ul></td>
+<td><ul class="points">
+<li>Linked List is an ordered group of elements of the same type, which are connected using pointers.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>Elements are stored consecutively in the memory.</li></ul></td>
+<td><ul class="points">
+<li>New elements can be stored anywhere in memory.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>An Array supports <strong>Random Access</strong>. It means that the elements can be accessed directly using their index value, like arr[0] for 1st element, arr[5] for 6th element, etc.<br/>
+As a result, accessing elements in an array is fast with constant time complexity of O(1).</li></ul></td>
+<td><ul class="points">
+<li>Linked List supports <strong>Sequential Access</strong>. It means that we have to traverse the complete linked list, up to that element sequentially which element/node we want to access in a linked list.<br/>
+To access the nth element of a linked list, the time complexity is O(n).</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>Memory is allocated at <strong>compile time</strong> as soon as the array is declared. It is known as <strong>Static Memory Allocation</strong>.</li></ul></td>
+<td><ul class="points">
+<li>Memory is allocated at <strong>runtime</strong>, whenever a new node is added. It is known as <strong>Dynamic Memory Allocation</strong>.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li><strong>Insertion and Deletion</strong> operation takes more time in the array, as the memory locations are consecutive and fixed.</li></ul></td>
+<td><ul class="points">
+<li>In case of a linked list, a new element is stored at the first free available memory location.<br/>
+Thus, Insertion and Deletion operations are fast in the linked list.</li></ul></td>
+</tr>
+<tr>
+<td><ul class="points">
+<li>Size of the array must be declared at the time of array declaration.</li></ul></td>
+<td><ul class="points">
+<li>Size of a Linked list is variable. It grows at runtime whenever nodes are added to it.</li></ul></td>
+</tr>
+</table>
+<hr/>
+<h3 class="h3">32) What do you understand by the Confusion Matrix?</h3>
+<p>A confusion matrix is a table which is used for summarizing the performance of a classification algorithm. It is also known as the <strong>error matrix</strong>.</p>
+<img alt="Machine Learning Interview Questions" src="https://static.javatpoint.com/interview/images/machine-learning-interview-questions32.png"/>
+<p>Where,</p>
+<p><strong>TN</strong>= True Negative<br/>
+<strong>TP</strong>= True Positive<br/>
+<strong>FN</strong>= False Negative<br/>
+<strong>FP</strong>= False Positive</p>
+<hr/>
+<h3 class="h3">33) Explain True Positive, True Negative, False Positive, and False Negative in Confusion Matrix with an example.</h3>
+<ul class="points">
+<li><strong>True Positive</strong><br/>
+When a model correctly predicts the positive class, it is said to be a true positive.<br/>
+For example, Umpire gives a Batsman NOT OUT when he is NOT OUT.</li>
+<li><strong>True Negative</strong><br/>
+When a model correctly predicts the negative class, it is said to be a true negative.<br/>
+For example, Umpire gives a Batsman OUT when he is OUT.</li>
+<li><strong>False Positive</strong><br/>
+When a model incorrectly predicts the positive class, it is said to be a false positive. It is also known as '<strong>Type I</strong>' error.<br/>
+For example, Umpire gives a Batsman NOT OUT when he is OUT.</li>
+<li><strong>False Negative</strong><br/>
+When a model incorrectly predicts the negative class, it is said to be a false negative. It is also known as '<strong>Type II</strong>' error.<br/>
+For example, Umpire gives a Batsman OUT when he is NOT OUT.</li>
+</ul>
+<hr/>
+<h3 class="h3">34) What according to you, is more important between model accuracy and model performance?</h3>
+<p>Model accuracy is a subset of model performance. The accuracy of the model is directly proportional to the performance of the model. Thus, better the performance of the model, more accurate are the predictions.</p>
+<hr/>
+<h3 class="h3">35) What is Bagging and Boosting?</h3>
+<ul class="points">
+<li>Bagging is a process in ensemble learning which is used for improving unstable estimation or classification schemes.</li>
+<li>Boosting methods are used sequentially to reduce the bias of the combined model.</li>
+</ul>
+<hr/>
+<h3 class="h3">36) What are the similarities and differences between bagging and boosting in Machine Learning?</h3>
+<p><strong>Similarities of Bagging and Boosting</strong></p>
+<ul class="points">
+<li>Both are the ensemble methods to get N learns from 1 learner.</li>
+<li>Both generate several training data sets with random sampling.</li>
+<li>Both generate the final result by taking the average of N learners.</li>
+<li>Both reduce variance and provide higher scalability.</li>
+</ul>
+<p><strong>Differences between Bagging and Boosting</strong></p>
+<ul class="points">
+<li>Although they are built independently, but for Bagging, Boosting tries to add new models which perform well where previous models fail.</li>
+<li>Only Boosting determines the weight for the data to tip the scales in favor of the most challenging cases.</li>
+<li>Only Boosting tries to reduce bias. Instead, Bagging may solve the problem of over-fitting while boosting can increase it.</li>
+</ul>
+<hr/>
+<h3 class="h3">37) What do you understand by Cluster Sampling?</h3>
+<p>Cluster Sampling is a process of randomly selecting intact groups within a defined population, sharing similar characteristics. Cluster sample is a probability where each sampling unit is a collection or cluster of elements.</p>
+<p><strong>For example</strong>, if we are clustering the total number of managers in a set of companies, in that case, managers (sample) will represent elements and companies will represent clusters.</p>
+<hr/>
+<h3 class="h3">38) What do you know about Bayesian Networks?</h3>
+<p>Bayesian Networks also referred to as '<strong>belief networks</strong>' or '<strong>casual networks</strong>', are used to represent the graphical model for probability relationship among a set of variables.</p>
+<p><strong>For example</strong>, a Bayesian network can be used to represent the probabilistic relationships between diseases and symptoms. As per the symptoms, the network can also compute the probabilities of the presence of various diseases.</p>
+<p>Efficient algorithms can perform inference or learning in Bayesian networks. Bayesian networks which relate the variables (e.g., speech signals or protein sequences) are called dynamic Bayesian networks.</p>
+<hr/>
+<h3 class="h3">39) Which are the two components of Bayesian logic program?</h3>
+<p>A Bayesian logic program consists of two components:</p>
+<ul class="points">
+<li><strong>Logical</strong><br/>
+It contains a set of Bayesian Clauses, which capture the qualitative structure of the domain.</li>
+<li><strong>Quantitative</strong><br/>
+It is used to encode quantitative information about the domain.</li>
+</ul>
+<hr/>
+<h3 class="h3">40) Describe dimension reduction in machine learning.</h3>
+<p>Dimension reduction is the process which is used to reduce the number of random variables under considerations.</p>
+<p>Dimension reduction can be divided into feature selection and extraction.</p>
+<hr/>
+<h3 class="h3">41) Why instance-based learning algorithm sometimes referred to as Lazy learning algorithm?</h3>
+<p>In machine learning, <strong>lazy learning</strong> can be described as a method where induction and generalization processes are delayed until classification is performed. Because of the same property, an instance-based learning algorithm is sometimes called lazy learning algorithm.</p>
+<hr/>
+<h3 class="h3">42) What do you understand by the F1 score?</h3>
+<p>The F1 score represents the measurement of a model's performance. It is referred to as a weighted average of the precision and recall of a model. The results tending to <strong>1</strong> are considered as the best, and those tending to <strong>0</strong> are the worst. It could be used in classification tests, where true negatives don't matter much.</p>
+<hr/>
+<h3 class="h3">43) How is a decision tree pruned?</h3>
+<p>Pruning is said to occur in decision trees when the branches which may consist of weak predictive power are removed to reduce the complexity of the model and increase the predictive accuracy of a decision tree model. Pruning can occur bottom-up and top-down, with approaches such as <strong>reduced error pruning</strong> and <strong>cost complexity pruning</strong>.</p>
+<p>Reduced error pruning is the simplest version, and it replaces each node. If it is unable to decrease predictive accuracy, one should keep it pruned. But, it usually comes pretty close to an approach that would optimize for maximum accuracy.</p>
+<hr/>
+<h3 class="h3">44) What are the Recommended Systems?</h3>
+<p>Recommended System is a sub-directory of information filtering systems. It predicts the preferences or rankings offered by a user to a product. According to the preferences, it provides similar recommendations to a user. Recommendation systems are widely used in <strong>movies, news, research articles, products, social tips, music,</strong> etc.</p>
+<hr/>
+<h3 class="h3">45) What do you understand by Underfitting?</h3>
+<p>Underfitting is an issue when we have a low error in both the training set and the testing set. Few algorithms work better for interpretations but fail for better predictions.</p>
+<hr/>
+<h3 class="h3">46) When does regularization become necessary in Machine Learning?</h3>
+<p>Regularization is necessary whenever the model begins to overfit/ underfit. It is a cost term for bringing in more features with the objective function. Hence, it tries to push the coefficients for many variables to zero and reduce cost term. It helps to reduce model complexity so that the model can become better at predicting (generalizing).</p>
+<hr/>
+<h3 class="h3">47) What is Regularization? What kind of problems does regularization solve?</h3>
+<p>A regularization is a form of regression, which constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, it discourages learning a more complex or flexible model to avoid the risk of overfitting. It reduces the variance of the model, without a substantial increase in its bias. </p>
+<p>Regularization is used to address overfitting problems as it penalizes the loss function by adding a multiple of an L1 (LASSO) or an L2 (Ridge) norm of weights vector w.</p>
+<hr/>
+<h3 class="h3">48) Why do we need to convert categorical variables into factor? Which functions are used to perform the conversion?</h3>
+<p>Most Machine learning algorithms require number as input. That is why we convert categorical values into factors to get numerical values. We also don't have to deal with dummy variables.</p>
+<p>The functions <strong>factor()</strong> and <strong>as.factor()</strong> are used to convert variables into factors.</p>
+<hr/>
+<h3 class="h3">49) Do you think that treating a categorical variable as a continuous variable would result in a better predictive model?</h3>
+<p>For a better predictive model, the categorical variable can be considered as a continuous variable only when the variable is ordinal in nature.</p>
+<hr/>
+<h3 class="h3">50) How is machine learning used in day-to-day life?</h3>
+<p>Most of the people are already using machine learning in their everyday life. Assume that you are engaging with the internet, you are actually expressing your preferences, likes, dislikes through your searches. All these things are picked up by cookies coming on your computer, from this, the behavior of a user is evaluated. It helps to increase the progress of a user through the internet and provide similar suggestions.</p>
+<p>The navigation system can also be considered as one of the examples where we are using machine learning to calculate a distance between two places using optimization techniques. Surely, people are going to more engage with machine learning in the near future.</p>
+<hr/>
+<br>
+<div id="interviewcategory">
+<table class="alt">
+<tr><td><a href="interview-tips">Interview Tips</a></td>
+<td><a href="job-interview-questions">Job/HR Interview Questions</a></td></tr>
+<tr><td><a href="javascript-interview-questions">JavaScript Interview Questions</a></td>
+<td><a href="jquery-interview-questions">jQuery Interview Questions</a></td></tr>
+<tr><td><a href="corejava-interview-questions#corebasicsinterview">Java Basics Interview Questions</a></td>
+<td><a href="corejava-interview-questions#oopsinterview">Java OOPs Interview Questions</a></td></tr>
+<tr><td><a href="servletinterview">Servlet Interview Questions</a></td>
+<td><a href="jspinterview">JSP Interview Questions</a></td></tr>
+<tr><td><a href="spring-interview-questions"><span>Spring Interview Questions</span></a></td><td><a href="hibernate-interview-questions"><span>Hibernate Interview Questions</span></a></td></tr>
+<tr><td><a href="pl-sql-interview-questions"><span>PL/SQL Interview Questions</span></a></td><td><a href="sql-interview-questions"><span>SQL Interview Questions</span></a></td></tr>
+<tr><td><a href="oracle-interview-questions"><span>Oracle Interview Questions</span></a></td><td><a href="android-interview-questions"><span>Android Interview Questions</span></a></td></tr>
+<tr><td><a href="sql-server-interview-questions"><span>SQL Server Interview Questions</span></a></td><td><a href="mysql-interview-questions"><span>MySQL Interview Questions</span></a></td></tr>
+</table>
+</div>
+<br><br>
+</br></br></br></td></tr>
+</table>
+</div>
+<hr class="hrhomebox"/>
+<h2 class="h3">You may also like:</h2>
+<ul class="points">
+<li><a href="corejava-interview-questions">Java Interview Questions</a></li>
+<li><a href="sql-interview-questions">SQL Interview Questions</a></li>
+<li><a href="python-interview-questions">Python Interview Questions</a></li>
+<li><a href="javascript-interview-questions">JavaScript Interview Questions</a></li>
+<li><a href="top-angular-interview-questions">Angular Interview Questions</a></li>
+<li><a href="selenium-interview-questions">Selenium Interview Questions</a></li>
+<li><a href="spring-boot-interview-questions">Spring Boot Interview Questions</a></li>
+<li><a href="job-interview-questions">HR Interview Questions</a></li>
+<li><a href="c-interview-questions">C Programming Interview Questions</a></li>
+<li><a href="cpp-interview-questions">C++ Interview Questions</a></li>
+<li><a href="data-structure-interview-questions">Data Structure Interview Questions</a></li>
+<li><a href="dbms-interview-questions">DBMS Interview Questions</a></li>
+<li><a href="html-interview-questions">HTML Interview Questions</a></li>
+<li><a href="ias-interview-questions">IAS Interview Questions</a></li>
+<li><a href="software-testing-interview-questions">Manual Testing Interview Questions</a></li>
+<li><a href="oops-interview-questions">OOPs Interview Questions</a></li>
+<li><a href="dot-net-interview-questions">.Net Interview Questions</a></li>
+<li><a href="c-sharp-interview-questions">C# Interview Questions</a></li>
+<li><a href="react-interview-questions">ReactJS Interview Questions</a></li>
+<li><a href="networking-interview-questions">Networking Interview Questions</a></li>
+<li><a href="php-interview-questions">PHP Interview Questions</a></li>
+<li><a href="css-interview-questions">CSS Interview Questions</a></li>
+<li><a href="node-js-interview-questions">Node.js Interview Questions</a></li>
+<li><a href="spring-interview-questions">Spring Interview Questions</a></li>
+<li><a href="hibernate-interview-questions">Hibernate Interview Questions</a></li>
+<li><a href="aws-interview-questions">AWS Interview Questions</a></li>
+<li><a href="accounting-interview-questions">Accounting Interview Questions</a></li>
+</ul>
+<hr class="hrhomebox"/>
+<fieldset class="gra1">
+<h2 class="h3">Learn Latest Tutorials</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/splunk">
+<div class="homecontent"><img alt="Splunk tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png"/>
+<p>Splunk</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/spss">
+<div class="homecontent"><img alt="SPSS tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png"/>
+<p>SPSS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/swagger">
+<div class="homecontent"><img alt="Swagger tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png"/>
+<p>Swagger</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/t-sql">
+<div class="homecontent"><img alt="T-SQL tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png"/>
+<p>Transact-SQL</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/tumblr">
+<div class="homecontent"><img alt="Tumblr tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png"/>
+<p>Tumblr</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img alt="React tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png"/>
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/regex">
+<div class="homecontent"><img alt="Regex tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png"/>
+<p>Regex</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reinforcement-learning">
+<div class="homecontent"><img alt="Reinforcement learning tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png"/>
+<p>Reinforcement Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/r-tutorial">
+<div class="homecontent"><img alt="R Programming tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png"/>
+<p>R Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/rxjs">
+<div class="homecontent"><img alt="RxJS tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png"/>
+<p>RxJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/react-native-tutorial">
+<div class="homecontent"><img alt="React Native tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png"/>
+<p>React Native</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-design-pattern">
+<div class="homecontent"><img alt="Python Design Patterns" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png"/>
+<p>Python Design Patterns</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-pillow">
+<div class="homecontent"><img alt="Python Pillow tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png"/>
+<p>Python Pillow</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-turtle-programming">
+<div class="homecontent"><img alt="Python Turtle tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png"/>
+<p>Python Turtle</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/keras">
+<div class="homecontent"><img alt="Keras tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png"/>
+<p>Keras</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox"/>
+<fieldset class="gra1">
+<h2 class="h3">Preparation</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/aptitude/quantitative">
+<div class="homecontent"><img alt="Aptitude" class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png"/>
+<p>Aptitude</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reasoning">
+<div class="homecontent"><img alt="Logical Reasoning" class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png"/>
+<p>Reasoning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/verbal-ability">
+<div class="homecontent"><img alt="Verbal Ability" class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png"/>
+<p>Verbal Ability</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/interview-questions-and-answers">
+<div class="homecontent"><img alt="Interview Questions" class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png"/>
+<p>Interview Questions</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+<div class="homecontent"><img alt="Company Interview Questions" class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg"/>
+<p>Company Questions</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox"/>
+<fieldset class="gra1">
+<h2 class="h3">Trending Technologies</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/artificial-intelligence-ai">
+<div class="homecontent"><img alt="Artificial Intelligence Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png"/>
+<p>Artificial Intelligence</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/aws-tutorial">
+<div class="homecontent"><img alt="AWS Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png"/>
+<p>AWS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/selenium-tutorial">
+<div class="homecontent"><img alt="Selenium tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png"/>
+<p>Selenium</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cloud-computing">
+<div class="homecontent"><img alt="Cloud Computing tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png"/>
+<p>Cloud Computing</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/hadoop-tutorial">
+<div class="homecontent"><img alt="Hadoop tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png"/>
+<p>Hadoop</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/reactjs-tutorial">
+<div class="homecontent"><img alt="ReactJS Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png"/>
+<p>ReactJS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-science">
+<div class="homecontent"><img alt="Data Science Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png"/>
+<p>Data Science</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/angular-7-tutorial">
+<div class="homecontent"><img alt="Angular 7 Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png"/>
+<p>Angular 7</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/blockchain-tutorial">
+<div class="homecontent"><img alt="Blockchain Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png"/>
+<p>Blockchain</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/git">
+<div class="homecontent"><img alt="Git Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png"/>
+<p>Git</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/machine-learning">
+<div class="homecontent"><img alt="Machine Learning Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png"/>
+<p>Machine Learning</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/devops">
+<div class="homecontent"><img alt="DevOps Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png"/>
+<p>DevOps</p>
+</div>
+</a>
+</div>
+</fieldset>
+<hr class="hrhomebox"/>
+<fieldset class="gra1">
+<h2 class="h3">B.Tech / MCA</h2>
+<div class="firsthomecontent">
+<a href="https://www.javatpoint.com/dbms-tutorial">
+<div class="homecontent"><img alt="DBMS tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png"/>
+<p>DBMS</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-structure-tutorial">
+<div class="homecontent"><img alt="Data Structures tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png"/>
+<p>Data Structures</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/daa-tutorial">
+<div class="homecontent"><img alt="DAA tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png"/>
+<p>DAA</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/operating-system">
+<div class="homecontent"><img alt="Operating System tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png"/>
+<p>Operating System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-network-tutorial">
+<div class="homecontent"><img alt="Computer Network tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png"/>
+<p>Computer Network</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/compiler-tutorial">
+<div class="homecontent"><img alt="Compiler Design tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png"/>
+<p>Compiler Design</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial">
+<div class="homecontent"><img alt="Computer Organization and Architecture" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png"/>
+<p>Computer Organization</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/discrete-mathematics-tutorial">
+<div class="homecontent"><img alt="Discrete Mathematics Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png"/>
+<p>Discrete Mathematics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/ethical-hacking">
+<div class="homecontent"><img alt="Ethical Hacking Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png"/>
+<p>Ethical Hacking</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/computer-graphics-tutorial">
+<div class="homecontent"><img alt="Computer Graphics Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png"/>
+<p>Computer Graphics</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/software-engineering">
+<div class="homecontent"><img alt="Software Engineering Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png"/>
+<p>Software Engineering</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/html-tutorial">
+<div class="homecontent"><img alt="html tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png"/>
+<p>Web Technology</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cyber-security-tutorial">
+<div class="homecontent"><img alt="Cyber Security tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png"/>
+<p>Cyber Security</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/automata-tutorial">
+<div class="homecontent"><img alt="Automata Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png"/>
+<p>Automata</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/c-programming-language-tutorial">
+<div class="homecontent"><img alt="C Language tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png"/>
+<p>C Programming</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/cpp-tutorial">
+<div class="homecontent"><img alt="C++ tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png"/>
+<p>C++</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/java-tutorial">
+<div class="homecontent"><img alt="Java tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png"/>
+<p>Java</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/net-framework">
+<div class="homecontent"><img alt=".Net Framework tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png"/>
+<p>.Net</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/python-tutorial">
+<div class="homecontent"><img alt="Python tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png"/>
+<p>Python</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/programs-list">
+<div class="homecontent"><img alt="List of Programs" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png"/>
+<p>Programs</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/control-system-tutorial">
+<div class="homecontent"><img alt="Control Systems tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png"/>
+<p>Control System</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-mining">
+<div class="homecontent"><img alt="Data Mining Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png"/>
+<p>Data Mining</p>
+</div>
+</a>
+<a href="https://www.javatpoint.com/data-warehouse">
+<div class="homecontent"><img alt="Data Warehouse Tutorial" class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png"/>
+<p>Data Warehouse</p>
+</div>
+</a>
+</div>
+</fieldset>
+</div>
+<div id="right">
+<ins class="adPushupAds" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBuZXdyaWdodCAtLT4KPGlucyBjbGFzcz0iYWRzYnlnb29nbGUiCiAgICAgc3R5bGU9ImRpc3BsYXk6YmxvY2siCiAgICAgZGF0YS1hZC1jbGllbnQ9ImNhLXB1Yi00Njk5ODU4NTQ5MDIzMzgyIgogICAgIGRhdGEtYWQtc2xvdD0iNjAzNDkxMjU0MSIKICAgICBkYXRhLWFkLWZvcm1hdD0iYXV0byIKICAgICBkYXRhLWZ1bGwtd2lkdGgtcmVzcG9uc2l2ZT0idHJ1ZSI+PC9pbnM+CjxzY3JpcHQ+CihhZHNieWdvb2dsZSA9IHdpbmRvdy5hZHNieWdvb2dsZSB8fCBbXSkucHVzaCh7fSk7Cjwvc2NyaXB0Pg==" data-adpcontrol="am3c1" data-siteid="37780" data-ver="2"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+<ins class="adPushupAds" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBuZXdyaWdodCAtLT4KPGlucyBjbGFzcz0iYWRzYnlnb29nbGUiCiAgICAgc3R5bGU9ImRpc3BsYXk6YmxvY2siCiAgICAgZGF0YS1hZC1jbGllbnQ9ImNhLXB1Yi00Njk5ODU4NTQ5MDIzMzgyIgogICAgIGRhdGEtYWQtc2xvdD0iNjAzNDkxMjU0MSIKICAgICBkYXRhLWFkLWZvcm1hdD0iYXV0byIKICAgICBkYXRhLWZ1bGwtd2lkdGgtcmVzcG9uc2l2ZT0idHJ1ZSI+PC9pbnM+CjxzY3JpcHQ+CihhZHNieWdvb2dsZSA9IHdpbmRvdy5hZHNieWdvb2dsZSB8fCBbXSkucHVzaCh7fSk7Cjwvc2NyaXB0Pg==" data-adpcontrol="am3c1" data-siteid="37780" data-ver="2"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+<br><br>
+</br></br></div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:10px;">
+<ins class="adPushupAds" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K" data-adpcontrol="6d5qg" data-siteid="37780" data-ver="2"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+<br><br><br><br>
+<ins class="adPushupAds" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K" data-adpcontrol="6d5qg" data-siteid="37780" data-ver="2"></ins><script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script>
+</br></br></br></br></div>
+<div id="footer" style="clear:both;width:100%">
+<div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on h<a class="__cf_email__" data-cfemail="ea98aa808b9c8b9e9a8583849ec4898587" href="/cdn-cgi/l/email-protection">[email protected]</a>, to get more information about given services. </p><ul class="points"> <li>Website Designing</li><li>Website Development</li><li>Java Development</li><li>PHP Development</li><li>WordPress</li><li>Graphic Designing</li><li>Logo</li><li>Digital Marketing</li><li>On Page and Off Page SEO</li><li>PPC</li><li>Content Development</li><li>Corporate Training</li><li>Classroom and Online Training</li><li>Data Entry</li></ul> <p style="padding-bottom:60px"></p></div><div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a class="__cf_email__" data-cfemail="85edf7c5efe4f3e4f1f5eaecebf1abe6eae8" href="/cdn-cgi/l/email-protection">[email protected]</a>. <br/>Duration: 1 week to 2 week<br/></p></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script><div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a href="https://feeds.feedburner.com/javatpointsonoo" rel="nofollow noopener" target="_blank"><img alt="RSS Feed" src="https://static.javatpoint.com/images/social/rss1.png"/></a> <a href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo" rel="nofollow noopener" target="_blank"><img alt="Subscribe to Get Email Alerts" src="https://static.javatpoint.com/images/social/mail1.png"/></a> <a href="https://www.facebook.com/javatpoint" rel="nofollow noopener" target="_blank"><img alt="Facebook Page" src="https://static.javatpoint.com/images/social/facebook1.jpg"/></a> <a href="https://twitter.com/pagejavatpoint" rel="nofollow" target="_blank noopener"><img alt="Twitter Page" src="https://static.javatpoint.com/images/social/twitter1.png"/></a> <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg" rel="nofollow noopener" target="_blank"><img alt="YouTube" src="https://static.javatpoint.com/images/youtube32.png"/></a> <a href="https://javatpoint.blogspot.com" rel="nofollow noopener" target="_blank"><img alt="Blog Page" src="https://static.javatpoint.com/images/social/blog.png"/></a> </div><footer class="footer1"><div class="column4"><h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a></div><div class="column4"><h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a href="https://www.hindi100.com" rel="dofollow noopener" target="_blank">Hindi100.com</a><a href="https://www.lyricsia.com" rel="dofollow noopener" target="_blank">Lyricsia.com</a><a href="https://www.quoteperson.com" rel="nofollow noopener" target="_blank">Quoteperson.com</a><a href="https://www.jobandplacement.com" rel="nofollow noopener" target="_blank">Jobandplacement.com</a></div><div class="column4"><h3>Our Services</h3><p>Website Development</p><p>Android Development</p><p>Website Designing</p><p>Digital Marketing</p><p>Summer Training</p><p>Industrial Training</p><p>College Campus Training</p></div><div class="column4"><h3>Contact</h3><p>Address: G-13, 2nd Floor, Sec-3</p><p>Noida, UP, 201301, India</p><p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a><br/><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a></div></footer><footer class="footer2"><p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p></footer>
+<div id="bot-root"></div>
+<script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script>
+</div>
+</div></div>
+<script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+<script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+<script async="" src="https://static.javatpoint.com/lazysizes.min.js"></script>
+</body>
+</html>

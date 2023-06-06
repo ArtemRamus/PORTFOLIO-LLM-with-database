@@ -1,0 +1,2628 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="Kings Gambit Labs" name="author"/>
+<title>InterviewBit</title>
+<meta content="Learn and Practice on almost all coding interview questions asked historically and get referred to the best tech companies" name="description">
+<meta content="InterviewBit" property="og:site_name">
+<meta content="InterviewBit" property="og:site">
+<meta content="Learn and Practice on almost all coding interview questions asked historically and get referred to the best tech companies" property="og:description">
+<meta content="http://ibassets.s3.amazonaws.com/static-assets/ib-logo-square.png" property="og:image"/>
+<meta content="https://www.interviewbit.com/machine-learning-interview-questions/" property="og:url"/>
+<link href="https://www.interviewbit.com/machine-learning-interview-questions/" rel="canonical"/>
+<meta data-id="interviewbit" name="env-name"/>
+<meta content="314158428787536" property="fb:app_id"/>
+<link href="https://assets.interviewbit.com/assets/ibpp/favicon-fcc4f9cdd2e768e1a9c0b884239242138fd250486c634d791103a152eee669a1.ico.gz" rel="icon" type="image/png"/>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://assets.interviewbit.com/assets/html5shiv-94b93b0dd2e9d1ae9799ab510d47057b7475e32ac98711bef05665fcba74bc83.js.gz" media="all"></script>
+  <script src="https://assets.interviewbit.com/assets/respond-d20bf9af0a876baf17629e8be06bb6c9238a8e4fddcdac379acd3141300b303a.js.gz" media="all"></script>
+  <![endif]-->
+<script>(function () {
+    window.jsLoggerBasePath || (window.jsLoggerBasePath = '');
+
+    window.jsLoggerUrl || (window.jsLoggerUrl = "/logger/rails_client_logger/log");
+
+    window.jsLogger = {
+        invoke: function (level, message) {
+            return jQuery.ajax({
+                type: 'post',
+                beforeSend: function (xhr) {
+                    return xhr.setRequestHeader('X-CSRF-Token', jQuery('meta[name="csrf-token"]').attr('content'));
+                },
+                data: {
+                    level: level,
+                    message: message
+                },
+                complete: function (request) {
+                },
+                url: "" + window.jsLoggerBasePath + window.jsLoggerUrl
+            });
+        },
+        debug: function (message) {
+            return this.invoke('debug', message);
+        },
+        info: function (message) {
+            return this.invoke('info', message);
+        },
+        warn: function (message) {
+            return this.invoke('warn', message);
+        },
+        error: function (message) {
+            return this.invoke('error', message);
+        },
+        fatal: function (message) {
+            return this.invoke('fatal', message);
+        }
+    };
+
+    window.onerror = function (message, url, line_number) {
+        if (message instanceof jQuery.Event && message.target.src.indexOf('fbcdn-profile') !== -1 ) {
+            return;
+        } else if (message instanceof jQuery.Event && message.target.src.indexOf('graph.facebook.com') !== -1 ) {
+            return;
+        } else if ($.type(message) === 'string' && message.indexOf("Script error") !== -1) {
+            return;
+        }
+        console.log(message);
+        jsLogger.fatal("Uncaught error in: " + url + ":" + line_number + "\nDetails: " + message);
+    };
+})();
+</script>
+<link href="https://assets.interviewbit.com/assets/web/application-dbe24426977ad6b87923c180464decf7560f6dad164f225c5fe6e0f8da535c66.css.gz" media="all" rel="stylesheet">
+<link href="https://assets.interviewbit.com/assets/web/errors-b3aab37745019a8d5c61095b45b6d974a4853f6cbcb9d39eed0c5ba1742321bb.css.gz" media="all" rel="stylesheet"/>
+<link href="https://assets.interviewbit.com/packs/css/frontend/base.ddcfdd.css" media="screen" rel="stylesheet"/>
+<link href="https://assets.interviewbit.com/packs/css/frontend/ib_admin~fro~f2704cda.6d036f.css" media="screen" rel="stylesheet"/>
+<link href="https://assets.interviewbit.com/packs/css/frontend/ibpp/onboarding.fddb7c.css" media="screen" rel="stylesheet"/>
+<meta content="authenticity_token" name="csrf-param"/>
+<meta content="DKetnowrwu3bzPL1mCWXYAENnRSNfckaUXZ5tsjucRwNljUChWyCcle9U7kVPYoOpk+ewQw6WBLbr/HC5BxAZg==" name="csrf-token"/>
+<script>
+  var domain = 'interviewbit.com';
+  if (domain.indexOf('www.') !== 0) {
+    domain = 'www.' + domain;
+  }
+
+  if (0 === document.location.href.indexOf("https://")) {
+    domain = "https://" + domain + "/";
+    if (0 !== document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/https:\/\/[^\/]+\//, domain);
+
+      if (newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  } else {
+    domain = "http://" + domain + "/";
+    if (0 != document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/http:\/\/[^\/]+\//, domain);
+
+      if(newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  }
+  </script>
+<script>
+  window.ENV_VARS = {
+    mode: "production",
+    application: JSON.parse('{"env_id":"interviewbit","env_site_name":"InterviewBit","env_site_nick":"InterviewBit","env_domain":"interviewbit.com","env_base_url":"https://www.interviewbit.com","env_from_mailer":"info@interviewbit.com","env_reply_to_mailer":"info@interviewbit.com","env_support_mailer":"support@interviewbit.com","env_hello_mailer":"hello@interviewbit.com","env_calendar_organiser":"info@interviewbit.com","env_webpush_manifest":"/gcm-manifest-ib.json"}'),
+    config: JSON.parse('{"speed_test_enabled":true,"seasonal_theme_mode":"none"}'),
+    request_source: "web"
+  };
+</script>
+<script>
+    window.addEventListener('load', function() {        
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      /* invoking here the custom event for IB also */
+      j.addEventListener('load', function() {
+        var _ge = new CustomEvent('initializedGTM', { bubbles: true });
+        d.dispatchEvent(_ge);
+      })
+      /* event is "initializedGTMEvent" */
+
+      f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', "GTM-NMKZTRG");
+    })
+  </script>
+<script>
+  var gtmServerEvents = [];
+
+  var freeMentee = false;
+  window.GTMData = (function () {
+      var userType = "";
+      
+      return {
+        gtmDataLayerVariables: [],
+        company: "interviewbit".toLowerCase(),
+        isLoggedIn: false,
+        email: "",
+        userId: "",
+        region: "india",
+        isNewUser: false,
+        cuIsUgStudent: "",
+        cuTwelfthGradYear: "",
+        userType,
+        freeMentee: userType && userType.includes('mentee') ? freeMentee : undefined,
+        gtmServerEvents,
+      };
+    })();
+</script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/tracking/gtm.6ab4d3.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/tracking/navigation.c4e01c.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/tracking/attribution.8f0b69.js"></script>
+<script>
+    window.recaptchaSiteKey = "6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"
+    window.recaptchaElements = [];
+    window.recaptchaV3Loaded = false;
+
+    function loadRecaptchaV3() {
+        if (!window.recaptchaV3Loaded) {
+            const scriptEl = document.createElement('script');
+            document.body.appendChild(scriptEl);
+            scriptEl.addEventListener('load', () => {
+                grecaptcha.ready(function() {
+                    window.grecaptcha?.execute();
+                });
+                const event = new Event('recaptcha-loaded');
+                document.dispatchEvent(event, {
+                    bubbles: true
+                });
+                window.recaptchaV3Loaded = true;
+            });
+            scriptEl.setAttribute(
+                'src',
+                `https://www.google.com/recaptcha/api.js`,
+            );
+        }
+    }
+
+    function loadRecaptchaV2(id) {
+        if (window.recaptchaV2Loaded) return;
+
+        const scriptEl = document.createElement('script');
+        document.body.appendChild(scriptEl);
+        scriptEl.addEventListener('load', () => {
+            const recaptchaScripts = Array.from(
+                document.scripts
+            ).filter(
+                el => el.src.includes('recaptcha__en')
+            )?.[0];
+            recaptchaScripts?.addEventListener('load', () => {
+                const response = window.grecaptcha?.render(id, {
+                    sitekey: window.recaptchaSiteKey,
+                });
+                const event = new Event('recaptcha-loaded');
+                document.dispatchEvent(event, {
+                    bubbles: true
+                });
+                window.recaptchaV2Loaded = true;
+            });
+        });
+        scriptEl.setAttribute(
+            'src',
+            `https://www.google.com/recaptcha/api.js?render=explicit`,
+        );
+        scriptEl.setAttribute(
+            'onerror',
+            `recaptchaError("${id}")`,
+        );
+    }
+
+    function initialiseRecaptchaV3() {
+        const recaptchaV3Els = Array.from(document.getElementsByClassName('lazy-recaptcha-v3'));
+        recaptchaV3Els.forEach(el => {
+            const {
+                id
+            } = el;
+            el.closest("form")?.addEventListener('click', () => loadRecaptchaV3());
+        });
+    }
+
+    function initializeV3ClickListeners() {
+        var submitButtons = Array.from(document.getElementsByClassName("recaptcha-form"));
+        var updatedSubmitButtons = submitButtons.filter(n => !window.recaptchaElements.includes(n))
+        window.recaptchaElements = submitButtons;
+        updatedSubmitButtons.forEach((submitButton) => {
+            submitButton.addEventListener('click', (e) => {
+                const formEl = submitButton.closest("form")
+                if (
+                    formEl &&
+                    !(window.TrackingHelper?.getContext('recaptcha-v2-forms') &&
+                        window.TrackingHelper?.getContext('recaptcha-v2-forms')[formEl.id]) &&
+                    window.grecaptcha
+                ) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    window.grecaptcha.execute({
+                        action: submitButton.getAttribute('data-recaptcha-action')
+                    }).then(function(token) {
+                        const recaptchaInputEl = formEl.querySelector(".g-recaptcha-response");
+                        const cloneButtonEl = submitButton.cloneNode(true);
+                        cloneButtonEl.classList.add('hide');
+                        cloneButtonEl.classList.add('hidden');
+                        formEl.appendChild(cloneButtonEl);
+                        recaptchaInputEl.value = token;
+                        const event = new Event('recaptcha-loaded');
+                        document.dispatchEvent(event, {
+                            bubbles: true
+                        });
+                        cloneButtonEl.click();
+                    });
+                }
+            })
+        })
+    }
+
+    function fallbackToRecaptchaV2(formId) {
+        const formEl = document.getElementById(formId);
+        const recaptchaV3El = formEl.querySelector('.lazy-recaptcha-v3');
+        const recaptchaV2El = formEl.querySelector('.lazy-recaptcha-v2');
+        if (recaptchaV3El) {
+            recaptchaV3El.classList.add('hide');
+            recaptchaV3El.remove();
+        }
+        const recaptchaId = `${formId}-recaptcha-v2`;
+        if (recaptchaV2El) {
+            recaptchaV2El.classList.remove('hide');
+            recaptchaV2El.id = recaptchaId;
+            loadRecaptchaV2(recaptchaId);
+            window.TrackingHelper.setContext(
+                'recaptcha-v2-forms', {
+                    [formId]: true
+                },
+            );
+            if (window.GTMtracker) {
+                window.GTMtracker.trackEvent('formSubmitStatusFormatter', {
+                    stage: formId,
+                    status: false,
+                    message: "Recaptcha V3 Failed, Loading V2 as fallback",
+                });
+            }
+        }
+    }
+    window.fallbackToRecaptchaV2 = fallbackToRecaptchaV2;
+    window.loadRecaptchaV2 = loadRecaptchaV2;
+
+    var recaptchaV3EventListenersAdded = false;
+    window.addEventListener('load', () => {
+        initialiseRecaptchaV3();
+        if (!recaptchaV3EventListenersAdded) {
+            initializeV3ClickListeners()
+            recaptchaV3EventListenersAdded = true;
+        }
+    })
+
+    document.addEventListener('initialize-recaptcha-triggers', () => {
+        initializeV3ClickListeners();
+    });
+</script>
+</link></meta></meta></meta></meta></head>
+<body>
+<link href="https://assets.interviewbit.com/assets/master/products/ibpp/components/header/index-76f9e0cfa8de56661ae45868f88dade44258b60e0440461f81c19eb8a6602e8b.css.gz" media="all" rel="stylesheet"/>
+<div class="ib-header-ribbon-container">
+<div class="ib-rolling-ribbon" data-ribbon="rolling"></div>
+<header class="header deployment succesful" data-gtm-sub-product="nav_bar" id="ibpp-header">
+<div class="header__container" id="ibpp-header-section">
+<!-- Header Left section -->
+<div class="header__left-section">
+<!-- Mobile view burger button -->
+<div class="burger header__burger-button burger__icon">
+<div class="burger__line"></div>
+<div class="burger__line"></div>
+<div class="burger__line"></div>
+</div>
+<!-- Header Brand Logo -->
+<a class="header__brand" href="/">
+<img alt="" class="header__brand-logo" src="https://assets.interviewbit.com/assets/ibpp/brand-5c6255a15a1b1307a1b8a2bf0bcb149b1ff9513ab2854c7d391b3faf5f33848f.svg.gz"/>
+</a>
+<!-- Header Nav Bar -->
+<div class="header__nav header__nav--desktop header__nav-options--desktop">
+<a class="header__nav-item header__nav-item-fill gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Practice" data-gtm-section="nav_bar" data-gtm-type="nav" href="/practice/">
+          Practice
+        </a>
+<div class="sr-dropdown-trigger header__nav-item header__nav-item-fill gtm-track-element" data-action="dropdown-toggle" data-activity="ib-header-dropdown-toggler" data-drop-down-padding="-17" data-dropdown-family="ib-header-nav" data-gtm-allowed-actions="click" data-gtm-parent="Resources" data-gtm-section="nav_bar" data-gtm-type="button" data-target="Resources">
+  
+        Resources
+        <span class="icon-chevron-down"></span>
+</div>
+<div class="sr-dropdown header__dropdown-container sr-dropdown--arrow-right" data-alignment="right" id="Resources">
+<div class="sr-dropdown__content">
+<div class="header__dropdown">
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Interview Guides" data-gtm-section="Resources List" data-gtm-type="nav" href="/technical-interview-questions/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/interview-guides-12287e8c726c9cf3bfc2925c375041ca2456fa71c57f056674e583df86a62459.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">Interview Guides</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="All Problems" data-gtm-section="Resources List" data-gtm-type="nav" href="/coding-interview-questions/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/all-problems-c647d4c9e1bfc1df49deb02ea8333f105e8dc29a91f7e60c96aafc40ec2422b8.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">All Problems</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Fast Track Courses" data-gtm-section="Resources List" data-gtm-type="nav" href="/courses/fast-track/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/fast-track-courses-420f67912f628db5ffdb5bd149b2eba2c7db127c5bbe94a3dc31154d0c98467b.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">Fast Track Courses</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Community" data-gtm-section="Resources List" data-gtm-type="nav" href="https://discord.com/invite/gD2ZTC5j8K">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/community-8509140d744878bc34874f66289fdae67294d4d2d6cfd288d4398a57bda3dc5d.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">Community</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Blog" data-gtm-section="Resources List" data-gtm-type="nav" href="/blog/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/blog-a3683db2e9cea2c51cfbb2b59148d1add35fc96ceb53b3352b45af5661a3a5ba.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">Blog</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Interview Preparation Kit" data-gtm-section="Resources List" data-gtm-type="nav" href="/interview-preparation-kit/">
+<span class="lazy-elem header__dropdown-item-new three-fourth" data-image="header__dropdown-item-new">
+</span>
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/study-plan-a121448bdfbced09ec0627fc622188b21ce5720ee9e443c3d270a0664f1acf14.svg.gz"/>
+<span class="m-l-10 header__dropdown-item-title">Interview Preparation Kit</span>
+</a>
+</div>
+</div>
+</div>
+<a class="header__nav-item header__nav-item-fill gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Contests" data-gtm-section="nav_bar" data-gtm-type="nav" href="/contests/">
+          Contests
+        </a>
+<div class="sr-dropdown-trigger header__nav-item header__nav-item-fill gtm-track-element" data-action="dropdown-toggle" data-activity="ib-header-dropdown-toggler" data-drop-down-padding="-17" data-dropdown-family="ib-header-nav" data-gtm-allowed-actions="click" data-gtm-parent="Online IDE" data-gtm-section="nav_bar" data-gtm-type="button" data-target="Online IDE">
+  
+        Online IDE
+        <span class="icon-chevron-down"></span>
+<div class="header__nav-item-new">
+            New 
+            <span class="header__nav-item-new__triangle"></span>
+</div>
+</div>
+<div class="sr-dropdown header__dropdown-container sr-dropdown--arrow-right" data-alignment="right" id="Online IDE">
+<div class="sr-dropdown__content">
+<div class="header__dropdown">
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online C++ Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-cpp-compiler/">
+<span class="lazy-elem fast-track cpp three-fourth" data-image="fast-track cpp">
+</span>
+<span class="m-l-10 header__dropdown-item-title">Online C++ Compiler</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online C Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-c-compiler/">
+<span class="lazy-elem fast-track c three-fourth" data-image="fast-track c">
+</span>
+<span class="m-l-10 header__dropdown-item-title">Online C Compiler</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online Python Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-python-compiler/">
+<span class="lazy-elem fast-track python three-fourth" data-image="fast-track python">
+</span>
+<span class="m-l-10 header__dropdown-item-title">Online Python Compiler</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online Java Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-java-compiler/">
+<span class="lazy-elem fast-track java three-fourth" data-image="fast-track java">
+</span>
+<span class="m-l-10 header__dropdown-item-title">Online Java Compiler</span>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online JavaScript Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-javascript-compiler/">
+<span class="lazy-elem fast-track javascript three-fourth" data-image="fast-track javascript">
+</span>
+<span class="m-l-10 header__dropdown-item-title">Online JavaScript Compiler</span>
+</a>
+</div>
+</div>
+</div>
+<div class="sr-dropdown-trigger header__nav-item header__nav-item-fill gtm-track-element" data-action="dropdown-toggle" data-activity="ib-header-dropdown-toggler" data-drop-down-padding="-17" data-dropdown-family="ib-header-nav" data-gtm-allowed-actions="click" data-gtm-parent="Free Mock" data-gtm-type="button" data-target="Free Mock">
+  
+        Free Mock
+        <span class="icon-chevron-down"></span>
+</div>
+<div class="sr-dropdown header__dropdown-container mock-interview-dropdown sr-dropdown--arrow-right" data-alignment="right" id="Free Mock">
+<div class="sr-dropdown__content">
+<div class="header__dropdown">
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Free Mock Assessment" data-gtm-section="Free Mock List" data-gtm-type="card" href="/mock-interview/" target="_blank">
+<div class="header__dropdown-item-logo-section">
+                Powered By <span class="header__dropdown-item-logo"></span>
+</div>
+<div class="header__dropdown-item-banner"></div>
+<div class="header__dropdown-item-heading" id="header-dropdown-heading">Free Mock Assessment</div>
+<div class="header__dropdown-item-description">Take popular mock tests for free with real life interview questions from top tech companies</div>
+<div class="header__dropdown-item-cta">Explore Mock Tests <span class="icon-chevron-right"> </span></div>
+</a>
+<a class="header__dropdown-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Mock Interview" data-gtm-section="Free Mock List" data-gtm-type="card" href="/peer-mock-interview/" target="_blank">
+<div class="header__dropdown-item-logo-section">
+                Powered By <span class="header__dropdown-item-logo"></span>
+</div>
+<div class="header__dropdown-item-banner"></div>
+<div class="header__dropdown-item-heading" id="header-dropdown-heading">Mock Interview</div>
+<div class="header__dropdown-item-description">Pair up with a peer like you and practise with hand-picked questions</div>
+<div class="header__dropdown-item-cta">Explore Mock Interviews <span class="icon-chevron-right"> </span></div>
+</a>
+</div>
+</div>
+</div>
+<a class="header__nav-item header__nav-item-fill gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Events" data-gtm-section="nav_bar" data-gtm-type="nav" href="/events/">
+          Events
+            <span class="header__nav-item-label"> New </span>
+</a>
+<a class="header__nav-item header__nav-item-fill gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Scaler" data-gtm-section="nav_bar" data-gtm-type="nav" href="https://www.scaler.com/?utm_source=ib&amp;utm_campaign=ib_menu&amp;utm_medium=nav_menu" id="ib-to-scaler-nav-item" onclick="window.trackGaEvent('NavMenu','scaler-click')" target="_blank">
+          Scaler
+        </a>
+<script>
+  const headerLeftSideDropdownItems = document.querySelectorAll('.header__left-section a.header__dropdown-item');
+  if (headerLeftSideDropdownItems) {
+    headerLeftSideDropdownItems.forEach((dropdownItem) => {
+      dropdownItem.addEventListener('click', () => {
+        window.trackGaEvent('header','nav-link', `${dropdownItem.href}`);
+        if (dropdownItem.innerText === 'Scaler Academy') {
+          window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler academy');
+        }
+        if (dropdownItem.innerText === 'Scaler Data Science and ML') {
+          window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler data science');
+        }
+      });
+    });
+  }
+
+  // hard coding the class as this tracking will only be used for 1 month to track some specific data related
+  // to scaler clicks
+  // please consult before removing
+  const scalerDropdownTrigger = document.querySelectorAll('.header__left-section div[data-target="Scaler"]')[0];
+  const freeMockDropdownTrigger = document.querySelectorAll('.header__left-section div[data-target="Free mock"]')[0];
+  if (scalerDropdownTrigger) {
+    scalerDropdownTrigger.addEventListener('click', () => {
+    window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler-header-dropdown');
+  });
+  }
+  if (freeMockDropdownTrigger) {
+    freeMockDropdownTrigger.addEventListener('click', () => {
+    window.trackGaEvent('NavMenu','free-mock-dropdown-click', 'free-mock-header-dropdown');
+  });
+  }
+
+  // addign active state to header contest nav_icon and fast Track nav_icon in desktop view
+  if (window.location.pathname.includes('/contests/')) {
+    const contestsNav = document.querySelector('[href="/contests/"]');
+    contestsNav.classList.add('header__nav-item--open');
+  }
+  if (window.location.pathname.includes('/courses/fast-track/')) {
+    const resourcesDropdownTrigger = document.querySelector('[data-target="Resources"]');
+    resourcesDropdownTrigger.classList.add('header__nav-item--open')
+  }
+</script>
+</div>
+<!-- Header Search Bar -->
+<div class="header__search-bar" id="ibpp-search-bar">
+<input class="header__search-bar-input" id="ibpp-search-input" placeholder="Search Interviewbit.com "/>
+<img alt="magnifying glass" class="header__search-bar-icon" height="18" src="https://assets.interviewbit.com/assets/ibpp/header/magnifying-glass-fb2cac7aa3ac94de98dbb8bb0abff877b93bd2c531cb7319ae91d04f2bbf44fc.svg.gz" width="18">
+<div class="hidden header__search-result-container" id="ibpp-search-result-container">
+</div>
+</img></div>
+<!-- Notification bell -->
+<a aria-label="Notifications" class="user-details__section user-details__notif-icon hide-in-above-tablet" href="/notifications/" rel="noopener noreferrer" target="_blank">
+<svg class="user-details__icon" fill="#506b6a" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect d="M0 0h256v256H0z" fill="none"></rect>
+<path d="M56.203 104a71.899 71.899 0 0 1 72.345-71.998c39.59.294 71.257 33.201 71.257 72.902V112c0 35.816 7.493 56.599 14.093 67.958A7.999 7.999 0 0 1 207.016 192H48.984a8 8 0 0 1-6.881-12.044c6.603-11.36 14.1-32.142 14.1-67.956ZM96 192v8a32 32 0 0 0 64 0v-8" fill="none" stroke="#506b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+</a>
+</div>
+<!-- Header Right section -->
+<div class="header__right-section">
+<div class="header__user-logged-in-section header__item-hide hide">
+<div class="user-details user-details--hide-in-above-tablet">
+<div class="header-nav-accordion__container">
+<div class="header-nav-accordion__header">
+<button class="gtm-track-element accordion-trigger header-nav-accordion" data-action="accordion-toggle" data-ga-action="accordion-toggle" data-ga-label="header-nav-user-option-user-details-desktop-trigger-tablet" data-gtm-allowed-actions="click" data-gtm-parent="accordion_toggle" data-gtm-type="accordion" data-target="header-nav-user-option-user-details-desktop-trigger-tablet" data-tracking="ga">
+<svg class="user-details__icon" fill="#00ccb6" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="256" width="256"></rect>
+<circle cx="128" cy="96" fill="none" r="64" stroke="#00ccb6" stroke-miterlimit="10" stroke-width="24"></circle>
+<path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#00ccb6" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+<div class="user-details__avatar-name"></div>
+<i class="icon-chevron-down"></i>
+</button> </div>
+<div class="accordion" id="header-nav-user-option-user-details-desktop-trigger-tablet" style="height: 0px;">
+<div class="header-nav-accordion__items-container">
+<a class="header-nav-accordion__item user-details__profile-nav" data-gtm-allowed-actions="click" data-gtm-element="Profile" data-gtm-type="nav" href="" onclick="window.trackGaEvent('header','nav-link','')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Profile
+                </span>
+</a>
+<a class="header-nav-accordion__item" data-gtm-allowed-actions="click" data-gtm-element="Settings" data-gtm-type="nav" href="/settings/" onclick="window.trackGaEvent('header','nav-link','/settings/')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Settings
+                </span>
+</a>
+<a class="header-nav-accordion__item" data-gtm-allowed-actions="click" data-gtm-element="Help Requests" data-gtm-type="nav" href="/help_requests/" onclick="window.trackGaEvent('header','nav-link','/help_requests/')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Help Requests
+                </span>
+</a>
+<form action="/users/sign_out/" class="header-nav-accordion__item header-nav-accordion__logout-btn" method="post" name="logout" style="display: block; width: 100%;">
+<input name="_method" type="hidden" value="delete"/>
+<input class="user-details__csrf-token" name="authenticity_token" type="hidden"/>
+<input class="header__user-option-logout header-nav-accordion__item-text" type="submit" value="Log out"/>
+</form>
+</div>
+</div> </div>
+</div>
+<div class="auth-trigger__content--desktop">
+<div class="user-details user-details--hide-in-tablet">
+<div data-plugin="streak-widget" id="root"></div>
+<link href="https://assets.interviewbit.com/packs/css/frontend/styles.7c05f1.css" media="screen" rel="stylesheet"/>
+<link defer="defer" href="https://assets.interviewbit.com/packs/css/vendors~frontend/asse~507edad8.dc72d5.css" media="screen" rel="stylesheet"/>
+<link defer="defer" href="https://assets.interviewbit.com/packs/css/frontend/assessments~~d083e141.22e284.css" media="screen" rel="stylesheet"/>
+<link defer="defer" href="https://assets.interviewbit.com/packs/css/frontend/assessments~~6eb80a90.674e9d.css" media="screen" rel="stylesheet"/>
+<link defer="defer" href="https://assets.interviewbit.com/packs/css/frontend/interviewbit~a98b5e4e.d114bf.css" media="screen" rel="stylesheet"/>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~e9f958b4.58af1a.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~507edad8.71a947.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~a62207ff.e89624.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~34774d49.483f65.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~8454ecb5.9e95db.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~c231eb90.ff126e.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/assessments~~13f77818.605f0a.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/assessments~~1c48cada.a80828.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/assessments~~d083e141.209330.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/assessments~~6eb80a90.4e30c6.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/interviewbit~a98b5e4e.f94d5b.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/interviewbit/sub_app/streak_widget_app.499413.js"></script>
+<div class="sr-dropdown-trigger user-details__section" data-action="dropdown-toggle" data-activity="ib-header-dropdown-toggler" data-drop-down-padding="-17" data-dropdown-family="ib-header-nav" data-gtm-allowed-actions="click" data-gtm-parent="user-details-desktop-trigger-tablet" data-gtm-type="button" data-target="user-details-desktop-trigger-tablet">
+<svg class="user-details__icon" fill="#506b6a" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="256" width="256"></rect>
+<circle cx="128" cy="96" fill="none" r="64" stroke="#506b6a" stroke-miterlimit="10" stroke-width="24"></circle>
+<path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#506b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+</div>
+<div class="sr-dropdown header__dropdown-container sr-dropdown--arrow-right" data-alignment="right" id="user-details-desktop-trigger-tablet">
+<div class="sr-dropdown__content">
+<div class="header__dropdown">
+<a class="header__dropdown-item user-details__profile-nav" href="">
+<span class="m-l-10">Profile</span>
+</a>
+<a class="header__dropdown-item" href="/settings/">
+<span class="m-l-10">Settings</span>
+</a>
+<a class="header__dropdown-item" href="/help_requests/">
+<span class="m-l-10">Help Requests</span>
+</a>
+<form action="/users/sign_out/" class="header-nav-accordion__item header-nav-accordion__logout-btn" method="post" name="logout" style="display: block; width: 100%;">
+<input name="_method" type="hidden" value="delete"/>
+<input class="user-details__csrf-token" name="authenticity_token" type="hidden"/>
+<input class="header__user-option-logout header-nav-accordion__item-text" type="submit" value="Log out"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Notifications" class="user-details__section user-details__notif-icon user-details--hide-in-tablet" href="/notifications/" rel="noopener noreferrer" target="_blank">
+<svg class="user-details__icon" fill="#506b6a" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect d="M0 0h256v256H0z" fill="none"></rect>
+<path d="M56.203 104a71.899 71.899 0 0 1 72.345-71.998c39.59.294 71.257 33.201 71.257 72.902V112c0 35.816 7.493 56.599 14.093 67.958A7.999 7.999 0 0 1 207.016 192H48.984a8 8 0 0 1-6.881-12.044c6.603-11.36 14.1-32.142 14.1-67.956ZM96 192v8a32 32 0 0 0 64 0v-8" fill="none" stroke="#506b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="header__user-logged-out-section header__item-hide">
+<a ;="" class="auth-trigger gtm-track-element ibpp-button primary auth-trigger__accordian" data-action="flow-trigger" data-gtm-allowed-actions="click hover" data-gtm-element="login" data-gtm-parent="nav_bar" data-gtm-section="nav_bar" data-gtm-type="nav" data-mode="login" data-target="auth" data-trigger="ibpp-auth-flow" href="javascript:void(0)" onclick="window.trackGaEvent('onboarding','signin-cta-clicked','Sign in')">
+<span class="auth-trigger__content--tablet">
+<span class="header-icon user"></span>
+      Login to experience InterviewBit
+      <i class="icon-chevron-right m-l-20"> </i>
+</span>
+<span class="auth-trigger__content--desktop">
+      Sign in
+    </span>
+</a>
+</div>
+</div>
+</div>
+<!-- Burger menu content -->
+<div class="header__burger">
+<div class="header__burger-head-elements">
+<!-- Mobile view burger button -->
+<div class="burger__close burger header__burger-button burger--active">
+<div class="burger__line"></div>
+<div class="burger__line"></div>
+<div class="burger__line"></div>
+</div>
+<a class="header__brand-burger-menu" href="/">
+<img alt="" class="header__brand-logo" src="https://assets.interviewbit.com/assets/ibpp/brand-5c6255a15a1b1307a1b8a2bf0bcb149b1ff9513ab2854c7d391b3faf5f33848f.svg.gz">
+</img></a>
+</div>
+<div class="header__nav header__nav--tablet hide-in-above-tablet">
+<div class="header__user-logged-in-section header__item-hide hide">
+<div class="user-details user-details--hide-in-above-tablet">
+<div class="header-nav-accordion__container">
+<div class="header-nav-accordion__header">
+<button class="gtm-track-element accordion-trigger header-nav-accordion" data-action="accordion-toggle" data-ga-action="accordion-toggle" data-ga-label="header-nav-user-option-user-details-tablet-trigger--v2-instance-tablet" data-gtm-allowed-actions="click" data-gtm-parent="accordion_toggle" data-gtm-type="accordion" data-target="header-nav-user-option-user-details-tablet-trigger--v2-instance-tablet" data-tracking="ga">
+<svg class="user-details__icon" fill="#00ccb6" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="256" width="256"></rect>
+<circle cx="128" cy="96" fill="none" r="64" stroke="#00ccb6" stroke-miterlimit="10" stroke-width="24"></circle>
+<path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#00ccb6" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+<div class="user-details__avatar-name"></div>
+<i class="icon-chevron-down"></i>
+</button> </div>
+<div class="accordion" id="header-nav-user-option-user-details-tablet-trigger--v2-instance-tablet" style="height: 0px;">
+<div class="header-nav-accordion__items-container">
+<a class="header-nav-accordion__item user-details__profile-nav" data-gtm-allowed-actions="click" data-gtm-element="Profile" data-gtm-type="nav" href="" onclick="window.trackGaEvent('header','nav-link','')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Profile
+                </span>
+</a>
+<a class="header-nav-accordion__item" data-gtm-allowed-actions="click" data-gtm-element="Settings" data-gtm-type="nav" href="/settings/" onclick="window.trackGaEvent('header','nav-link','/settings/')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Settings
+                </span>
+</a>
+<a class="header-nav-accordion__item" data-gtm-allowed-actions="click" data-gtm-element="Help Requests" data-gtm-type="nav" href="/help_requests/" onclick="window.trackGaEvent('header','nav-link','/help_requests/')">
+<span class="m-l-20 header-nav-accordion__item-text">
+                  Help Requests
+                </span>
+</a>
+<form action="/users/sign_out/" class="header-nav-accordion__item header-nav-accordion__logout-btn" method="post" name="logout" style="display: block; width: 100%;">
+<input name="_method" type="hidden" value="delete"/>
+<input class="user-details__csrf-token" name="authenticity_token" type="hidden"/>
+<input class="header__user-option-logout header-nav-accordion__item-text" type="submit" value="Log out"/>
+</form>
+</div>
+</div> </div>
+</div>
+<div class="auth-trigger__content--desktop">
+<div class="user-details user-details--hide-in-tablet">
+<div data-plugin="streak-widget" id="root"></div>
+<div class="sr-dropdown-trigger user-details__section" data-action="dropdown-toggle" data-activity="ib-header-dropdown-toggler" data-drop-down-padding="-17" data-dropdown-family="ib-header-nav" data-gtm-allowed-actions="click" data-gtm-parent="user-details-tablet-trigger--v2-instance-tablet" data-gtm-type="button" data-target="user-details-tablet-trigger--v2-instance-tablet">
+<svg class="user-details__icon" fill="#506b6a" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="256" width="256"></rect>
+<circle cx="128" cy="96" fill="none" r="64" stroke="#506b6a" stroke-miterlimit="10" stroke-width="24"></circle>
+<path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#506b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+</div>
+<div class="sr-dropdown header__dropdown-container sr-dropdown--arrow-right" data-alignment="right" id="user-details-tablet-trigger--v2-instance-tablet">
+<div class="sr-dropdown__content">
+<div class="header__dropdown">
+<a class="header__dropdown-item user-details__profile-nav" href="">
+<span class="m-l-10">Profile</span>
+</a>
+<a class="header__dropdown-item" href="/settings/">
+<span class="m-l-10">Settings</span>
+</a>
+<a class="header__dropdown-item" href="/help_requests/">
+<span class="m-l-10">Help Requests</span>
+</a>
+<form action="/users/sign_out/" class="header-nav-accordion__item header-nav-accordion__logout-btn" method="post" name="logout" style="display: block; width: 100%;">
+<input name="_method" type="hidden" value="delete"/>
+<input class="user-details__csrf-token" name="authenticity_token" type="hidden"/>
+<input class="header__user-option-logout header-nav-accordion__item-text" type="submit" value="Log out"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<a aria-label="Notifications" class="user-details__section user-details__notif-icon user-details--hide-in-tablet" href="/notifications/" rel="noopener noreferrer" target="_blank">
+<svg class="user-details__icon" fill="#506b6a" height="192" viewbox="0 0 256 256" width="192" xmlns="http://www.w3.org/2000/svg">
+<rect d="M0 0h256v256H0z" fill="none"></rect>
+<path d="M56.203 104a71.899 71.899 0 0 1 72.345-71.998c39.59.294 71.257 33.201 71.257 72.902V112c0 35.816 7.493 56.599 14.093 67.958A7.999 7.999 0 0 1 207.016 192H48.984a8 8 0 0 1-6.881-12.044c6.603-11.36 14.1-32.142 14.1-67.956ZM96 192v8a32 32 0 0 0 64 0v-8" fill="none" stroke="#506b6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="header__user-logged-out-section header__item-hide">
+<a ;="" class="auth-trigger gtm-track-element ibpp-button primary auth-trigger__accordian" data-action="flow-trigger" data-gtm-allowed-actions="click hover" data-gtm-element="login" data-gtm-parent="nav_bar" data-gtm-section="nav_bar" data-gtm-type="nav" data-mode="login" data-target="auth" data-trigger="ibpp-auth-flow" href="javascript:void(0)" onclick="window.trackGaEvent('onboarding','signin-cta-clicked','Sign in')">
+<span class="auth-trigger__content--tablet">
+<span class="header-icon user"></span>
+      Login to experience InterviewBit
+      <i class="icon-chevron-right m-l-20"> </i>
+</span>
+<span class="auth-trigger__content--desktop">
+      Sign in
+    </span>
+</a>
+</div>
+<a class="header__nav-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Practice" data-gtm-section="nav_bar" data-gtm-type="nav" href="/practice/" id="Practice__accordian" onclick="window.trackGaEvent('header','nav-link','/practice/')">
+<div class="header__nav-item-container">
+<span class="header-icon practice">
+</span>
+<div class="header__nav-item-info">
+              Practice
+              <div class="header__nav-item-subtext">
+                Improve your coding skills with our resources
+              </div>
+</div>
+</div>
+</a>
+<div class="header-nav-accordion__container">
+<div class="header-nav-accordion__header" data-gtm-section="nav_bar" id="header-nav-accordion-trigger-1" onclick="document.getElementById('header-nav-accordion-trigger-1')
+          .classList.toggle('header-nav-accordion--expand');
+        ">
+<button class="gtm-track-element accordion-trigger header-nav-accordion" data-action="accordion-toggle" data-ga-action="accordion-toggle" data-ga-label="header-nav-accordion-1" data-gtm-allowed-actions="click" data-gtm-parent="accordion_toggle" data-gtm-type="accordion" data-target="header-nav-accordion-1" data-tracking="ga">
+<span class="header-icon resources">
+</span>
+<span class="header-nav-accordion__trigger-text">
+              Resources
+              <div class="header__nav-item-subtext header-nav-accordion__trigger-subtext">
+                Experience learning
+              </div>
+</span>
+<i class="icon-chevron-down"></i>
+</button> </div>
+<div class="accordion" id="header-nav-accordion-1" style="height: 0px;">
+<div class="header-nav-accordion__items-container">
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Interview Guides" data-gtm-section="Resources List" data-gtm-type="nav" href="/technical-interview-questions/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/interview-guides-12287e8c726c9cf3bfc2925c375041ca2456fa71c57f056674e583df86a62459.svg.gz">
+<span class="m-l-10 header-nav-accordion__item-text">Interview Guides</span>
+</img></a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="All Problems" data-gtm-section="Resources List" data-gtm-type="nav" href="/coding-interview-questions/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/all-problems-c647d4c9e1bfc1df49deb02ea8333f105e8dc29a91f7e60c96aafc40ec2422b8.svg.gz">
+<span class="m-l-10 header-nav-accordion__item-text">All Problems</span>
+</img></a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Fast Track Courses" data-gtm-section="Resources List" data-gtm-type="nav" href="/courses/fast-track/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/fast-track-courses-420f67912f628db5ffdb5bd149b2eba2c7db127c5bbe94a3dc31154d0c98467b.svg.gz">
+<span class="m-l-10 header-nav-accordion__item-text">Fast Track Courses</span>
+</img></a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Community" data-gtm-section="Resources List" data-gtm-type="nav" href="https://discord.com/invite/gD2ZTC5j8K">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/community-8509140d744878bc34874f66289fdae67294d4d2d6cfd288d4398a57bda3dc5d.svg.gz">
+<span class="m-l-10 header-nav-accordion__item-text">Community</span>
+</img></a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Blog" data-gtm-section="Resources List" data-gtm-type="nav" href="/blog/">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/blog-a3683db2e9cea2c51cfbb2b59148d1add35fc96ceb53b3352b45af5661a3a5ba.svg.gz"/>
+<span class="m-l-10 header-nav-accordion__item-text">Blog</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Interview Preparation Kit" data-gtm-section="Resources List" data-gtm-type="nav" href="/interview-preparation-kit/">
+<span class="lazy-elem header__dropdown-item-new three-fourth" data-image="header__dropdown-item-new">
+</span>
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/study-plan-a121448bdfbced09ec0627fc622188b21ce5720ee9e443c3d270a0664f1acf14.svg.gz"/>
+<span class="m-l-10 header-nav-accordion__item-text">Interview Preparation Kit</span>
+</a>
+</div>
+</div> </div>
+<a class="header__nav-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Contests" data-gtm-section="nav_bar" data-gtm-type="nav" href="/contests/" id="Contests__accordian" onclick="window.trackGaEvent('header','nav-link','/contests/')">
+<div class="header__nav-item-container">
+<span class="header-icon contests">
+</span>
+<div class="header__nav-item-info">
+              Contests
+              <div class="header__nav-item-subtext">
+                Compete in popular contests with top coders
+              </div>
+</div>
+</div>
+</a>
+<div class="header-nav-accordion__container">
+<div class="header-nav-accordion__header" data-gtm-section="nav_bar" id="header-nav-accordion-trigger-3" onclick="document.getElementById('header-nav-accordion-trigger-3')
+          .classList.toggle('header-nav-accordion--expand');
+        ">
+<button class="gtm-track-element accordion-trigger header-nav-accordion" data-action="accordion-toggle" data-ga-action="accordion-toggle" data-ga-label="header-nav-accordion-3" data-gtm-allowed-actions="click" data-gtm-parent="accordion_toggle" data-gtm-type="accordion" data-target="header-nav-accordion-3" data-tracking="ga">
+<span class="header-icon online-ide">
+</span>
+<span class="header-nav-accordion__trigger-text">
+              Online IDE
+              <div class="header__nav-item-subtext header-nav-accordion__trigger-subtext">
+                Checkout our improved IDE
+              </div>
+</span>
+<i class="icon-chevron-down"></i>
+</button> </div>
+<div class="accordion" id="header-nav-accordion-3" style="height: 0px;">
+<div class="header-nav-accordion__items-container">
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online C++ Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-cpp-compiler/">
+<span class="lazy-elem fast-track cpp three-fourth" data-image="fast-track cpp">
+</span>
+<span class="m-l-10 header-nav-accordion__item-text">Online C++ Compiler</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online C Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-c-compiler/">
+<span class="lazy-elem fast-track c three-fourth" data-image="fast-track c">
+</span>
+<span class="m-l-10 header-nav-accordion__item-text">Online C Compiler</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online Python Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-python-compiler/">
+<span class="lazy-elem fast-track python three-fourth" data-image="fast-track python">
+</span>
+<span class="m-l-10 header-nav-accordion__item-text">Online Python Compiler</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online Java Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-java-compiler/">
+<span class="lazy-elem fast-track java three-fourth" data-image="fast-track java">
+</span>
+<span class="m-l-10 header-nav-accordion__item-text">Online Java Compiler</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Online JavaScript Compiler" data-gtm-section="Online IDE List" data-gtm-type="nav" href="/online-javascript-compiler/">
+<span class="lazy-elem fast-track javascript three-fourth" data-image="fast-track javascript">
+</span>
+<span class="m-l-10 header-nav-accordion__item-text">Online JavaScript Compiler</span>
+</a>
+</div>
+</div> </div>
+<div class="header-nav-accordion__container">
+<div class="header-nav-accordion__header" data-gtm-section="nav_bar" id="header-nav-accordion-trigger-4" onclick="document.getElementById('header-nav-accordion-trigger-4')
+          .classList.toggle('header-nav-accordion--expand');
+        ">
+<button class="gtm-track-element accordion-trigger header-nav-accordion" data-action="accordion-toggle" data-ga-action="accordion-toggle" data-ga-label="header-nav-accordion-4" data-gtm-allowed-actions="click" data-gtm-parent="accordion_toggle" data-gtm-type="accordion" data-target="header-nav-accordion-4" data-tracking="ga">
+<span class="header-icon mock-interview">
+</span>
+<span class="header-nav-accordion__trigger-text">
+              Free Mock
+              <div class="header__nav-item-subtext header-nav-accordion__trigger-subtext">
+                Assess yourself and prepare for interviews
+              </div>
+</span>
+<i class="icon-chevron-down"></i>
+</button> </div>
+<div class="accordion" id="header-nav-accordion-4" style="height: 0px;">
+<div class="header-nav-accordion__items-container">
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Free Mock Assessment" data-gtm-section="Mock Interview" data-gtm-type="nav" href="/mock-interview/" onclick="window.trackGaEvent('NavMenu','free-mock-dropdown-click','/mock-interview/')">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/scaler-forever-182db7e48ff42f84dacbca3377a55035cfe16a11546fdf39a66f87ea48c161be.svg.gz"/>
+<span class="m-l-10 header-nav-accordion__item-text">Free Mock Assessment</span>
+</a>
+<a class="header-nav-accordion__item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Mock Interview" data-gtm-section="Mock Interview" data-gtm-type="nav" href="/peer-mock-interview/" onclick="window.trackGaEvent('NavMenu','free-mock-dropdown-click','/peer-mock-interview/')">
+<img class="header__dropdown-item-image lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/header/v2/peer-mock-interview-bf62edb2cf0e7a5670069abd039eb5f3bc95ddefefbe5c10608c653bcf9a9e13.svg.gz"/>
+<span class="m-l-10 header-nav-accordion__item-text">Mock Interview</span>
+</a>
+</div>
+</div> </div>
+<a class="header__nav-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Events" data-gtm-section="nav_bar" data-gtm-type="nav" href="/events/" id="Events__accordian" onclick="window.trackGaEvent('header','nav-link','/events/')">
+<div class="header__nav-item-container">
+<img alt="logo" class="header__nav-item-container-image" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/022/395/original/Events_Desktop.svg?1672738540"/>
+<div class="header__nav-item-info">
+              Events
+              <div class="header__nav-item-subtext">
+                Attend free live masterclass hosted by top tech professionals
+              </div>
+</div>
+<span class="header__nav-item-label"> New </span>
+</div>
+</a>
+<a class="header__nav-item gtm-track-element" data-gtm-allowed-actions="click" data-gtm-parent="Scaler" data-gtm-section="nav_bar" data-gtm-type="nav" href="https://www.scaler.com/?utm_source=ib&amp;utm_campaign=ib_menu&amp;utm_medium=nav_menu" id="Scaler__accordian" onclick="window.trackGaEvent('NavMenu', 'scaler-click')" target="_blank">
+<div class="header__nav-item-container">
+<span class="header-icon scaler">
+</span>
+<div class="header__nav-item-info">
+              Scaler
+              <div class="header__nav-item-subtext">
+                Explore Offerings by SCALER
+              </div>
+</div>
+</div>
+</a>
+<script>
+  const headerAccordianItems = document.querySelectorAll('.header__burger a.header-nav-accordion__item');
+  if (headerAccordianItems) {
+    headerAccordianItems.forEach((dropdownItem) => {
+      dropdownItem.addEventListener('click', () => {
+        window.trackGaEvent('header','nav-link', `${dropdownItem.href}`);
+        if (dropdownItem.innerText === 'Scaler Academy') {
+          window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler academy');
+        }
+        if (dropdownItem.innerText === 'Scaler Data Science and ML') {
+          window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler data science');
+        }
+      });
+    });
+  }
+
+  // hard coding the class as this tracking will only be used for 1 month to track some specific data related
+  // to scaler clicks
+  // please consult before removing
+  const scalerAccordianTrigger = document.querySelectorAll('.header__burger button[data-target="header-nav-accordion-0"]')[0];
+  const freeMockAccordianTrigger = document.querySelectorAll('.header__burger button[data-target="header-nav-accordion-5"]')[0];
+  if (scalerAccordianTrigger) {
+    scalerAccordianTrigger.addEventListener('click', () => {
+    window.trackGaEvent('NavMenu','scaler-dropdown-click', 'scaler-header-dropdown');
+  });
+  }
+  if (freeMockAccordianTrigger) {
+    freeMockAccordianTrigger.addEventListener('click', () => {
+    window.trackGaEvent('NavMenu','free-mock-dropdown-click', 'free-mock-header-dropdown');
+  });
+  }
+  // addign active state to header contest nav_icon in tablet view
+  if (window.location.pathname.includes('/contests/')) {
+    const contestsNavAccordian = document.getElementById('Contests__accordian');
+    contestsNavAccordian.classList.add('header__nav-item--open');
+  }
+  if (window.location.pathname.includes('/courses/fast-track/')) {
+    const resourcesDropdownTrigger = document.getElementById('header-nav-accordion-trigger-2');
+    resourcesDropdownTrigger.classList.add('header__nav-item--open')
+  }
+</script>
+</div>
+</div>
+<div class="header__backdrop"></div>
+</header>
+</div>
+<script>
+  // this is a helper variable for our abTest script to know if the page is cached or not.
+  window.__INTERVIEWBIT__ = {
+    ...window.__INTERVIEWBIT__,
+    isPageCached: false,
+    authProviderUrls: {
+      facebook: "/users/auth/facebook/",
+      linkedin: "/users/auth/linkedin/",
+      github: "/users/auth/github/",
+      google: "/users/auth/google_oauth2/",
+      sitekey: "6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"
+    },
+  }
+
+    window.__INTERVIEWBIT__ = {
+      ...window.__INTERVIEWBIT__,
+        user: {"userId":null,"email":null,"graduation_year":null,"country_code":null,"phone_number":null,"email_verified":null,"is_tnc_accepted":null,"oauth_tracking_token":null,"phone_verified":false},
+    }
+
+  window.addEventListener('load', function() {
+    const burger_menu = document.getElementById('ibpp-header');
+    const burger_icon = document.querySelector('.burger__icon');
+    const burger_icon_right = document.querySelector('.burger__icon-right');
+    const headerSelector = '.header__nav.header__nav--desktop';
+    const desktopHeader = document.querySelector(headerSelector);
+    if (desktopHeader && window.innerWidth <= 768) {
+      desktopHeader.innerHTML = '';
+    }
+    document.querySelector('.burger__close').addEventListener('click', function(){
+      burger_menu.classList.remove('header--burger-open');
+      burger_icon.classList.remove('burger--active');
+    })
+    if (burger_icon_right) {
+      burger_icon_right.addEventListener('click', function(){
+        burger_menu.classList.toggle('header--burger-open');
+        burger_icon_right.classList.toggle('burger--active');
+      })
+    }
+  })
+</script>
+<div data-widget="auth-form-widget-root">
+</div>
+<link defer="defer" href="https://assets.interviewbit.com/packs/css/frontend/interviewbit~ebd47e67.90c7c0.css" media="screen" rel="stylesheet"/>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/vendors~frontend/inte~7eda8d9e.2b0680.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/interviewbit~ebd47e67.f44c2c.chunk.js"></script>
+<script defer="defer" src="https://assets.interviewbit.com/packs/js/frontend/interviewbit/sub_app/auth_form_app.71c13b.js"></script>
+<div class="notifications top-right"></div>
+<div class="notifications top-left"></div>
+<div class="notifications bottom-right"></div>
+<div class="notifications bottom-left"></div>
+<style>
+@media only screen and (max-width: 768px){
+	#error_404{
+		background-image: url("https://assets.interviewbit.com/assets/404-mobil-02-02-2a4bb1d45d7c1a68bd0b69b268b35a33670dae70ae0d63e1077ef6e90cace358.png.gz") !important;
+		height:600px !important;
+		width: 100% !important;
+		padding-left: -10px !important;
+		padding-right: -15px !important;
+	}
+	#e1{
+		height: 150px !important;
+		margin-top: 0px !important;
+		background-image: url("https://assets.interviewbit.com/assets/404_text-14d02a6186e8ed4d59b90d65ec454ab7cfb2e7e56ff5067cb40a53286aa1005a.png.gz") !important;
+		margin-left: 20% !important;
+		margin-top: 20% !important;
+		background-size:   70% 100% !important; 
+	}
+	#r1{
+		height: 200px !important;
+	}
+	#e2{
+		height: 0px !important;
+	}
+	input[type=button]{
+		margin-left: 15px !important;
+		font-weight : bold !important;
+	}
+}
+@media screen and (min-width:768px) and (max-width:991px){
+	#e2{
+		height: 0px !important;
+	}
+	#e1{
+		margin-left: 10% !important;
+	}
+
+}
+
+.navbar{
+	margin-bottom: 0px !important;
+}
+#e1{
+	background-image: url("https://assets.interviewbit.com/assets/404_text_desktop-4c7ac6a13dc471611a84a9ef1e1c78f9ffd17bfaec8373a684d832dab29035fa.png.gz");
+	background-repeat:   no-repeat;
+	background-size:   30% 50%; 
+	margin-top: 100px; 
+}
+#error_404 {
+	width: 100%;
+	display : block;							
+	height: 460px;
+	background-image: url("https://assets.interviewbit.com/assets/404-bg-01-94e41d295496ec6666721cb50ae3265e9efc1d1eda979fe80297b177917156a9.png.gz");
+	background-size:   100%  100%;                      
+	background-repeat:   no-repeat;
+	background-position: center; 
+}
+input[type=button] {
+	background-color: #fff;
+	border: none;
+	color: #24326b;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight : bold;
+}
+</style>
+<div id="error_404">
+<div class="row" style="height: 300px;">
+<div class="col-sm-12 col-md-1" id="e2" style="height: 300px;"></div>
+<div class="col-sm-12 col-md-11" id="e1" style="height: 300px;">
+<a href="https://www.interviewbit.com"><input style="margin-top:170px; margin-left: -15px;width: 170px;height: 33px;border-radius: 4px;" type="button" value="Take me home"/></a>
+</div>
+</div>
+</div>
+<script id="global-modal-template" type="text/x-template">
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Info</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+<div class="feedback-box" id="upsale-feedback-box" style="padding: 12px 0;">
+<div>
+<a href="/" style="color: #63b1c6;">
+      Click here to start solving coding interview questions
+    </a>
+</div>
+</div>
+<div aria-labelledby="SignUp" class="modal fade" id="sign-up-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog user-panel" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<div style="max-width: 500px; margin: 2rem auto; padding: 0 2rem">
+<div data-fullscreen="'true'" data-widget="auth-form-widget-root">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="SignIn" class="modal fade" id="sign-in-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog user-panel" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<div style="max-width: 500px; margin: 2rem auto; padding: 0 2rem">
+<div data-fullscreen="'true'" data-widget="auth-form-widget-root">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script crossorigin="anonymous" src="https://assets.interviewbit.com/assets/web/application-e54aac5fb7a6e54f5c88eb1546ce137292b9ca13ffdc34dde452717b3c32fbaa.js.gz"></script>
+<script crossorigin="anonymous" src="https://assets.interviewbit.com/assets/web/errors-f78f0f583e152fa235ca51f99bab70d1aeb59675de57c78bcef18b5a2e8a5a5f.js.gz"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      (
+        myinterviewtrainer &&
+        myinterviewtrainer.keyword_search &&
+        myinterviewtrainer.keyword_search.init()
+      );
+    });
+  </script>
+<script>
+    window.addEventListener('load', function() {
+      window.Interviewbit.authFlow();
+    });
+  </script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      (
+        myinterviewtrainer &&
+        myinterviewtrainer.keyword_search &&
+        myinterviewtrainer.keyword_search.init()
+      );
+    });
+  </script>
+<script src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~cf325c15.c5ba33.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/vendors~frontend/asse~8e66dcca.26a3b7.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/vendors~frontend/base.42d127.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/assessments~~7e042b27.455fe0.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/base~fronten~6140cb06.335c92.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/base.6ccc00.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/vendors~frontend/ibpp~8d65adbc.58ccc3.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ibpp/common~~2e7cc86c.601f06.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ib_admin~fro~f2704cda.58d939.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ibpp/onboarding.fc079c.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ibpp/common~~3014468f.56a027.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ibpp/vanilla-header.81f5bc.js"></script>
+<noscript>
+<iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NMKZTRG" style="display:none;visibility:hidden" width="0"></iframe>
+</noscript>
+<script>
+    var gaSendMethod = 'send';
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.defer=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-56207880-1', {'siteSpeedSampleRate': 100});
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+
+    // added so that the files that are common on both ib and scaler can handle their respective ga calls
+    window.trackGaEvent = function(...args) {
+        const gaArgs = [gaSendMethod, 'event', ...args];
+        window.ga(...gaArgs);
+        // This is a temporary workaround
+        if (gaArgs[1] !== 'exception' && typeof storeEsEvent !== 'undefined') {
+            let eventTitle = "";
+            for (let i = 2; i < gaArgs.length; i++) {
+                if (i != 2)
+                    eventTitle = eventTitle + "-";
+                eventTitle = eventTitle + gaArgs[i];
+            }
+            storeEsEvent(eventTitle);
+        }
+    }
+</script>
+<div data-auto_prompt="false" data-client_id="555034069712-3l6fq4ijgqmbufisic1da21ov6gmh83k.apps.googleusercontent.com" data-context="use" data-login_uri="https://www.interviewbit.com/google_one_tap/" id="g_id_onload">
+</div>
+<script async="" defer="" src="https://accounts.google.com/gsi/client"></script>
+<script>
+  (function (window, undefined) {
+    var logged_in = 'false';
+    var scriptLoaded = false;
+
+    var showPrompt = function () {
+      var addScript = !scriptLoaded && (false || window.googleOneTapConfig.disableAutoPropmt);
+
+      if (addScript) {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://accounts.google.com/gsi/client';
+        s.onload = function () {
+          google.accounts.id.prompt();
+        }
+
+        document.body.appendChild(s);
+        scriptLoaded = true;
+      } else {
+        google.accounts.id.prompt();
+      }
+    };
+
+    window.googleOneTapConfig = window.googleOneTapConfig || {};
+    window.googleOneTapConfig.showGooglePrompt = showPrompt;
+
+    window.onGoogleLibraryLoad = function () {
+      var disableAutoPropmt = false || window.googleOneTapConfig.disableAutoPropmt;
+
+      if (logged_in === 'false' && !disableAutoPropmt) {
+        showPrompt();
+      }
+    };
+  })(window);
+</script>
+<link href="https://assets.interviewbit.com/assets/master/products/ibpp/pages/event-a381fa4e509b856f0705b31f59895b575790c307f1526717f0076939fd0c6c91.css.gz" media="screen" rel="stylesheet"/>
+<div class="login-popup login-popup--close">
+<div class="login-popup__close-action login-popup__close-action--hide">
+<i class="icon-close"></i>
+</div>
+<div class="login-popup__container">
+<div class="login-popup__unlock">
+<span>Unlock the complete InterviewBit <br/>experience for free</span>
+</div>
+<div class="login-popup__register">
+        Sign Up Using
+        <div class="login-popup__auth">
+<div data-class="auth-triggers">
+<a class="auth-providers__action" data-auth-trigger-name="google" data-class="auth-triggers" href="/users/auth/facebook/">
+<img data-class="auth-triggers" data-gtm-element="facebook" src="https://assets.interviewbit.com/assets/ibpp/onboarding/facebook-ce5cc4f440dc3cb23e5a7bbe9db41da57804f29595c83dd7b603ac79c8034724.svg.gz"/>
+</a>
+</div>
+<div data-class="auth-triggers">
+<a class="auth-providers__action" data-auth-trigger-name="github" data-class="auth-triggers" href="/users/auth/github/">
+<img data-auth-trigger-name="github" data-class="auth-triggers" src="https://assets.interviewbit.com/assets/ibpp/onboarding/github-e7de13c97e442cae5b2791c0045dbc2a2752b60a246dbbadd15f7e08b58183b9.svg.gz"/>
+</a>
+</div>
+<div data-class="auth-triggers">
+<a class="auth-providers__action" data-auth-trigger-name="google" data-class="auth-triggers" href="/users/auth/google_oauth2/">
+<img data-auth-trigger-name="google" data-class="auth-triggers" src="https://assets.interviewbit.com/assets/ibpp/onboarding/google-36d787f315453b7698d0f060d807e211b297198aa30b2fa59d2af526d1035e92.svg.gz"/>
+</a>
+</div>
+<div>
+<a class="auth-providers__action" data-auth-trigger-name="linkedin" data-class="auth-triggers" href="/users/auth/linkedin/">
+<img data-auth-trigger-name="linkedin" data-class="auth-triggers" src="https://assets.interviewbit.com/assets/ibpp/onboarding/linkedin-eba2839477afbc53e085df2352f4388f3470879ff9e191826d619cac64452992.svg.gz"/>
+</a>
+</div>
+</div>
+</div>
+<div class="login-popup__trigger" data-auth-trigger-name="email" data-class="auth-triggers" onclick="window.trackGaEvent('full_interstitial', 'link_clicked', 'email')">
+      Or use email
+    </div>
+<div class="login-popup__bricks-content">
+<div>
+<p>1 Million +</p> 
+        Strong Tech Community
+      </div>
+<div>
+<p>500 +</p>
+        Questions to Practice
+      </div>
+<div>
+<p>100 +</p>
+        Expert Interview Guides
+      </div>
+</div>
+</div>
+</div>
+<link href="https://assets.interviewbit.com/assets/master/products/ibpp/pages/moco-event-form/index-85ff42b5649b56842232c30402b9ab0b3de95836b89ac16248d01c6422bd9bd0.css.gz" media="all" rel="stylesheet"/>
+<div class="sr-modal sp-form-modal marketing-form marketing-form--borderless sp-form-modal__react-instance" id="application-modal">
+<div class="sr-modal__content sr-modal__content--right">
+<div class="sr-modal__body">
+<script>
+    window.__INTERVIEWBIT__ = {
+      ...window.__INTERVIEWBIT__,
+      userPresent: false,
+      whatsapp_consent: null,
+      details: {"email":"","profile":"","name":"","phone_number":"","phone_verified":false,"orgyear":"","orgname":"","position":"","university":"","country_code":"","experience_years":null},
+      fields: {
+        orgyearRange: {},
+        experienceRange: {}
+      }
+    }
+</script>
+<form id="moco-event-register" novalidate="">
+<div class="moco-event-register row" data-class="moco-event-form" data-gtm-sub-product="Moco">
+<i class="icon-close trigger-moco-form"></i>
+<div class="moco-event-register__form column">
+<div class="version-v1">
+<div class="moco-ib-header moco-ib-header__left">
+<div class="moco-ib-header__section-brand">
+<img class="moco-ib-header__ib-logo" src="https://assets.interviewbit.com/assets/ibpp/moco-images/brand-bcc717b4058fed9412d98ef3bcd39d8f240669d8d79ddc3d331d26fb6529413c.svg.gz"/>
+<div class="moco-ib-header__heading">
+<span class="moco-ib-header__test-title">Free Mock Assessment</span>
+<div class="moco-event-register__scaler-logo header">
+<span>Powered By <img src="https://assets.interviewbit.com/assets/ibpp/moco-images/scaler-logo-40ee66d1a8bae334500f41e98b8c773993e98c129873fac82d271135bb9b51eb.svg.gz"/></span>
+</div>
+</div>
+<div class="version-v2">
+<div class="moco-ib-header__section-test-detail">
+</div>
+</div>
+</div>
+<div class="version-v2">
+<div class="moco-ib-header__section-test-instructions">
+</div>
+</div>
+</div>
+</div>
+<div class="version-v2">
+<div class="moco-ib-header">
+<div class="moco-ib-header__heading-right">
+    Fill up the details for personalised experience.
+  </div>
+<div class="moco-ib-header__subheading-right">
+<i> All fields are mandatory </i>
+</div>
+</div>
+</div>
+<div class="moco-event-register__form-section">
+<div class="moco-event-register__form-section-static">
+<!-- TYPE OF TEST SELECTION BASIC OR ADVANCE -->
+<div class="moco-ib-content moco-ib-content--hide" id="moco-course-selection">
+<div class="moco-ib-content__container">
+<!-- INNER CONTENT WOULD BE SET , DYNAMICALLY -->
+</div>
+</div>
+</div>
+<div class="moco-event-register__form-section-dynamic">
+<!-- THIS PORTION OF FORM WILL KEEP ONCHANGING, VIA JS -->
+</div>
+<div class="moco-event-register__form-section-static">
+<div class="moco-event-register__form-section-static version-v1 assigned-version-v1">
+<div class="row space-between flex-grid">
+<!-- COMPANY SELECT -->
+<div class="layout__content--fit m-r-10">
+<div class="form-field moco-event-register__orgname-input" data-name="">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Current Employer
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="sr-select" id="moco-event-orgname">
+<div class="sr-select__control">
+<input aria-label="select orgname" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="orgname" name="select-ignore-orgname" type="text">
+<input aria-label="orgname" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-event-orgname" name="orgname" required="" tabindex="-1" type="text" value=""/>
+<div class="sr-select__box" id="moco-event-orgname-select-box">
+<div class="sr-select__placeholder" data-gtm-element="orgname">
+        Enter company name
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</input></div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+<span class="moco-event-register__orgname-input-error-msg" data-visibility="hide">
+</span>
+</div>
+<div class="moco-grad-year layout__content--fit">
+<!-- GRADYEAR SELECT -->
+<div class="form-field moco-event-register__gradyear-input" data-name="">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Graduation Year
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="sr-select" id="moco-event-gradyear">
+<div class="sr-select__control">
+<input aria-label="select orgyear" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="orgyear" name="select-ignore-orgyear" type="text"/>
+<input aria-label="orgyear" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-event-gradyear" name="orgyear" required="" tabindex="-1" type="text" value=""/>
+<div class="sr-select__box" id="moco-event-gradyear-select-box">
+<div class="sr-select__placeholder" data-gtm-element="orgyear">
+        Select an option
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1993" role="option">
+  
+        1993
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1994" role="option">
+  
+        1994
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1995" role="option">
+  
+        1995
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1996" role="option">
+  
+        1996
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1997" role="option">
+  
+        1997
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1998" role="option">
+  
+        1998
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1999" role="option">
+  
+        1999
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2000" role="option">
+  
+        2000
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2001" role="option">
+  
+        2001
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2002" role="option">
+  
+        2002
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2003" role="option">
+  
+        2003
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2004" role="option">
+  
+        2004
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2005" role="option">
+  
+        2005
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2006" role="option">
+  
+        2006
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2007" role="option">
+  
+        2007
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2008" role="option">
+  
+        2008
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2009" role="option">
+  
+        2009
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2010" role="option">
+  
+        2010
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2011" role="option">
+  
+        2011
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2012" role="option">
+  
+        2012
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2013" role="option">
+  
+        2013
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2014" role="option">
+  
+        2014
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2015" role="option">
+  
+        2015
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2016" role="option">
+  
+        2016
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2017" role="option">
+  
+        2017
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2018" role="option">
+  
+        2018
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2019" role="option">
+  
+        2019
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2020" role="option">
+  
+        2020
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2021" role="option">
+  
+        2021
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2022" role="option">
+  
+        2022
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2023" role="option">
+  
+        2023
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2024" role="option">
+  
+        2024
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2025" role="option">
+  
+        2025
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2026" role="option">
+  
+        2026
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2027" role="option">
+  
+        2027
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2028" role="option">
+  
+        2028
+
+</div>
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+<span class="moco-event-register__gradyear-input-error-msg" data-visibility="hide">
+</span>
+</div>
+</div>
+<!-- PHONE INPUT WITH COUNTRY CODE -->
+<div class="moco-event-register__phone-input">
+<div class="form-field" data-name="phone-number-field">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Phone Number
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="form-label__hint">
+      OTP will be sent to this number for verification
+    </div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="scaler-event__phone-field-wrap">
+<div class="ib-phone-input scaler-event__phone-input">
+<div class="ib-select ib-phone-input-country has-value is-searchable">
+<div class="sr-select" id="moco-phone-country-code">
+<div class="sr-select__control">
+<input aria-label="select phone_country_code" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="phone_country_code" name="select-ignore-phone_country_code" type="text"/>
+<input aria-label="phone_country_code" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-phone-country-code" name="phone_country_code" required="" tabindex="-1" type="text" value="+91"/>
+<div class="sr-select__box" id="moco-phone-country-code-select-box">
+<div class="sr-select__placeholder" data-gtm-element="phone_country_code">
+        +91
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+<div class="sr-select__option" data-value="+91" role="option">
+<div class="phone-input__option">
+<div class="phone-input__flag">
+<span class="iti__flag iti__in"> </span>
+</div>
+<div class="phone-input__option-code">
+                +91
+              </div>
+</div>
+</div>
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="ib-spacing-horiz"></div>
+<div class="moco-event-register__material-input-group">
+<input class="ib-phone-input-number moco-event-register__text-input form-input moco-input-normalized_phone" id="moco-normalized-phone" name="normalized_phone" required="" type="tel" value=""/>
+<label class="moco-event-register__input-label moco-label-normalized_phone" for="moco-normalized-phone"> Phone Number </label>
+<span class="moco-event-register__text-input-error-msg moco-error-normalized_phone"></span>
+</div>
+</div>
+<a class="scaler-event__change-phone-number hide" id="change-phone-number">Change Number</a>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+<div class="recaptcha-override">
+<script async="" defer="" src="https://www.recaptcha.net/recaptcha/api.js"></script>
+<div class="g-recaptcha" data-sitekey="6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"></div>
+<noscript>
+<div>
+<div style="width: 302px; height: 422px; position: relative;">
+<div style="width: 302px; height: 422px; position: absolute;">
+<iframe name="ReCAPTCHA" src="https://www.recaptcha.net/recaptcha/api/fallback?k=6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj" style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+</iframe>
+</div>
+</div>
+<div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+<textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+</div>
+</div>
+</noscript>
+</div>
+</div>
+</div>
+<div class="moco-event-register__form-section-static version-v2 assigned-version-v2">
+<div class="row space-between flex-grid">
+<!-- PHONE INPUT WITH COUNTRY CODE -->
+<div class="moco-event-register__phone-input">
+<div class="form-field" data-name="phone-number-field">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Phone Number
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="form-label__hint">
+      OTP will be sent to this number for verification
+    </div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="scaler-event__phone-field-wrap">
+<div class="ib-phone-input scaler-event__phone-input">
+<div class="ib-select ib-phone-input-country has-value is-searchable">
+<div class="sr-select" id="moco-phone-country-code">
+<div class="sr-select__control">
+<input aria-label="select phone_country_code" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="phone_country_code" name="select-ignore-phone_country_code" type="text">
+<input aria-label="phone_country_code" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-phone-country-code" name="phone_country_code" required="" tabindex="-1" type="text" value="+91"/>
+<div class="sr-select__box" id="moco-phone-country-code-select-box">
+<div class="sr-select__placeholder" data-gtm-element="phone_country_code">
+        +91
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</input></div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+<div class="sr-select__option" data-value="+91" role="option">
+<div class="phone-input__option">
+<div class="phone-input__flag">
+<span class="iti__flag iti__in"> </span>
+</div>
+<div class="phone-input__option-code">
+                +91
+              </div>
+</div>
+</div>
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="ib-spacing-horiz"></div>
+<div class="moco-event-register__material-input-group">
+<input class="ib-phone-input-number moco-event-register__text-input form-input moco-input-normalized_phone" id="moco-normalized-phone" name="normalized_phone" required="" type="tel" value=""/>
+<label class="moco-event-register__input-label moco-label-normalized_phone" for="moco-normalized-phone"> Phone Number </label>
+<span class="moco-event-register__text-input-error-msg moco-error-normalized_phone"></span>
+</div>
+</div>
+<a class="scaler-event__change-phone-number hide" id="change-phone-number">Change Number</a>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+</div>
+<div class="moco-grad-year layout__content--fit">
+<!-- GRADYEAR SELECT -->
+<div class="form-field moco-event-register__gradyear-input" data-name="">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Graduation Year
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="sr-select" id="moco-event-gradyear">
+<div class="sr-select__control">
+<input aria-label="select orgyear" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="orgyear" name="select-ignore-orgyear" type="text">
+<input aria-label="orgyear" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-event-gradyear" name="orgyear" required="" tabindex="-1" type="text" value=""/>
+<div class="sr-select__box" id="moco-event-gradyear-select-box">
+<div class="sr-select__placeholder" data-gtm-element="orgyear">
+        Graduation Year
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</input></div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1993" role="option">
+  
+        1993
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1994" role="option">
+  
+        1994
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1995" role="option">
+  
+        1995
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1996" role="option">
+  
+        1996
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1997" role="option">
+  
+        1997
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1998" role="option">
+  
+        1998
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="1999" role="option">
+  
+        1999
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2000" role="option">
+  
+        2000
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2001" role="option">
+  
+        2001
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2002" role="option">
+  
+        2002
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2003" role="option">
+  
+        2003
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2004" role="option">
+  
+        2004
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2005" role="option">
+  
+        2005
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2006" role="option">
+  
+        2006
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2007" role="option">
+  
+        2007
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2008" role="option">
+  
+        2008
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2009" role="option">
+  
+        2009
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2010" role="option">
+  
+        2010
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2011" role="option">
+  
+        2011
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2012" role="option">
+  
+        2012
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2013" role="option">
+  
+        2013
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2014" role="option">
+  
+        2014
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2015" role="option">
+  
+        2015
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2016" role="option">
+  
+        2016
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2017" role="option">
+  
+        2017
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2018" role="option">
+  
+        2018
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2019" role="option">
+  
+        2019
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2020" role="option">
+  
+        2020
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2021" role="option">
+  
+        2021
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2022" role="option">
+  
+        2022
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2023" role="option">
+  
+        2023
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2024" role="option">
+  
+        2024
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2025" role="option">
+  
+        2025
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2026" role="option">
+  
+        2026
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2027" role="option">
+  
+        2027
+
+</div>
+<div class="sr-select__option" data-gtm-element="option" data-permanent="false" data-value="2028" role="option">
+  
+        2028
+
+</div>
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+<span class="moco-event-register__gradyear-input-error-msg" data-visibility="hide">
+</span>
+</div>
+</div>
+<span class="moco-ib-header__subheading-right moco-event-register__phone-input">
+<i> <sup>*</sup>Enter the expected year of graduation if you're student </i>
+</span>
+<!-- COMPANY SELECT -->
+<div class="layout__content--fit">
+<div class="form-field moco-event-register__orgname-input orgname-hide" data-name="">
+<div class="form-field__label">
+<div class="form-label">
+<div class="form-label__text">
+    Current Employer
+      <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+</div>
+</div>
+<div class="form-field__input">
+<div class="sr-select" id="moco-event-orgname">
+<div class="sr-select__control">
+<input aria-label="select orgname" autocomplete="none" class="sr-select__input gtm-track-element" data-gtm-element="orgname" name="select-ignore-orgname" type="text"/>
+<input aria-label="orgname" autocomplete="off" class="sr-select__value-input" data-is-creatable="false" id="input-moco-event-orgname" name="orgname" required="" tabindex="-1" type="text" value=""/>
+<div class="sr-select__box" id="moco-event-orgname-select-box">
+<div class="sr-select__placeholder" data-gtm-element="orgname">
+        Company Name
+          <span class="form-label__required" data-class="asterisk-mark">*</span>
+</div>
+<div class="sr-select__value">
+</div>
+<div class="sr-select__loader">
+</div>
+<div class="sr-select__arrow">
+<i class="icon-chevron-down"></i>
+</div>
+</div>
+</div>
+<div class="sr-select__dropdown sr-select__dropdown--bottom">
+<div class="sr-select__hint hidden">
+      Type to search
+    </div>
+<div class="sr-select__options" role="listbox">
+</div>
+<div class="sr-select__create-option hidden">
+</div>
+<div class="sr-select__no-options hidden">
+      No results found
+    </div>
+</div>
+</div>
+</div>
+<div class="form-field__error form-field__error--hidden">
+</div>
+</div>
+<span class="moco-event-register__orgname-input-error-msg" data-visibility="hide">
+</span>
+</div>
+<div class="moco-event-register__phone-input">
+<div class="recaptcha-override">
+<script async="" defer="" src="https://www.recaptcha.net/recaptcha/api.js"></script>
+<div class="g-recaptcha" data-sitekey="6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj"></div>
+<noscript>
+<div>
+<div style="width: 302px; height: 422px; position: relative;">
+<div style="width: 302px; height: 422px; position: absolute;">
+<iframe name="ReCAPTCHA" src="https://www.recaptcha.net/recaptcha/api/fallback?k=6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj" style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+</iframe>
+</div>
+</div>
+<div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+<textarea class="g-recaptcha-response" id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+</div>
+</div>
+</noscript>
+</div>
+</div>
+</div>
+<!-- OTP FORM -->
+<div class="moco-event-register__otp-form hide">
+<div class="moco-event-register__otp-heading hide"> 
+    Please verify your phone number 
+  </div>
+<div class="moco-event-register__phone-details">
+<div class="moco-event-register__phone-number-container">
+<!-- WILL HAVE PHONE NUMBER DETAILS -->
+<div class="country-code">
+<!-- COUNTRY CODE -->
+</div>
+<div class="number-value">
+<!-- PHONE NUMBER VALUE -->
+</div>
+</div>
+<div id="moco-event-register-handleback">
+<span data-class="edit-phone-number"> Edit </span>
+<div class="moco-event-register__otp-timer version-v1">
+<!-- OTP TIMER, "30 secs" -->
+</div>
+</div>
+</div>
+<div class="moco-event-register__otp-details">
+<div class="moco-event-register__otp-input">
+<div class="moco-event-register__otp-input-blocks">
+<input class="otp-value" type="text"/>
+<input class="otp-value" type="text"/>
+<input class="otp-value" type="text"/>
+<input class="otp-value" type="text"/>
+<input class="otp-value" type="text"/>
+<input class="otp-value" type="text"/>
+</div>
+<div class="moco-event-register__otp-error">
+<span class="moco-event-register__text-input-error-msg moco-phone-otp-error"></span>
+</div>
+</div>
+<div class="moco-event-register__otp-info">
+<div class="moco-event-register__otp-timer version-v2">
+<!-- OTP TIMER, "30 secs" -->
+</div>
+<div class="moco-event-register__otp-resend">
+        Resend OTP
+      </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="moco-event-register__footer-group">
+<button class="moco-event-register__submit"></button>
+<button class="moco-event-register__skip moco-event-register__skip--disable">
+          Skip
+          <i class="moco-event-register__right-arrow"></i>
+</button>
+<div class="moco-event-register__steps">
+<div class="moco-event-register__steps-progress"></div>
+<span class="moco-event-register__steps-completed"></span>
+</div>
+</div>
+<div class="moco-event-register__form-terms"> 
+        By clicking on Start Test, I agree to be contacted by Scaler in the future.
+      </div>
+<div class="moco-event-register__auth-message">
+          Already have an account? 
+        <span class="moco-event-register__auth-message-trigger gtm-track-element" data-gtm-allowed-actions="click" data-gtm-element="Moco form login button" data-gtm-section="Moco_form"> 
+          Log in
+        </span>
+</div>
+<div class="moco-event-register__scaler-logo footer">
+<span>Powered By <img src="https://assets.interviewbit.com/assets/ibpp/scaler-logo-0b2789a8342be57762ac2306c5ccb8e34f83fc8152222fbe2736f6ce16d258ca.svg.gz"/></span>
+</div>
+</div>
+<div class="moco-event-register__banner">
+<div class="moco-event-register__banner-section">
+<span class="version-v2">
+<div class="moco-ib-header moco-ib-header__left">
+<div class="moco-ib-header__section-brand">
+<img class="moco-ib-header__ib-logo" src="https://assets.interviewbit.com/assets/ibpp/moco-images/brand-bcc717b4058fed9412d98ef3bcd39d8f240669d8d79ddc3d331d26fb6529413c.svg.gz"/>
+<div class="moco-ib-header__heading">
+<span class="moco-ib-header__test-title">Free Mock Assessment</span>
+<div class="moco-event-register__scaler-logo header">
+<span>Powered By <img src="https://assets.interviewbit.com/assets/ibpp/moco-images/scaler-logo-40ee66d1a8bae334500f41e98b8c773993e98c129873fac82d271135bb9b51eb.svg.gz"/></span>
+</div>
+</div>
+<div class="version-v2">
+<div class="moco-ib-header__section-test-detail">
+</div>
+</div>
+</div>
+<div class="version-v2">
+<div class="moco-ib-header__section-test-instructions">
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</form>
+<script src="https://assets.interviewbit.com/packs/js/vendors~frontend/ibpp~db2fa71b.b7a963.chunk.js"></script>
+<script src="https://assets.interviewbit.com/packs/js/frontend/ibpp/moco_event.2561f8.js"></script>
+</div>
+</div>
+</div>
+<div class="moco-test-confirmation-modal" data-id="moco-test-start-modal" data-visibility="hide">
+<div class="moco-test-start-modal__logo">
+<img class="moco-ib-header__ib-logo" src="https://assets.interviewbit.com/assets/ibpp/moco-images/brand-bcc717b4058fed9412d98ef3bcd39d8f240669d8d79ddc3d331d26fb6529413c.svg.gz"/>
+</div>
+<div class="moco-test-start-modal__test-name bold h2" data-class="moco-test-name">
+</div>
+<div class="moco-test-start-modal__instructions-heading">
+<b> Instructions from Interviewbit </b>
+</div>
+<div class="moco-test-start-modal__test-content" data-class="moco-test-instructions">
+</div>
+<div class="moco-test-start-modal__redirect-btn h5 cursor" data-class="moco-test-start-handler">
+    Start Test
+  </div>
+</div>
+<div class="moco-form-backdrop" data-test-id="moco-form-backdrop"></div>
+<script>
+    window.addEventListener('load', () => {
+      const userDetails = {
+        loggedIn: false,
+        newUser : false,
+        isCrawler: null
+      }
+      window.Interviewbit && window.Interviewbit.captureUserDetails(
+        userDetails,
+      );
+    });
+  </script>
+<link href="https://assets.interviewbit.com/assets/master/products/ibpp/pages/footer-6f0693781e0acd0358f82dc2c0ab9d1cd5e9f72a4751d42b2897781ba06e35b9.css.gz" media="all" rel="stylesheet"/>
+<div class="gtm-track-element footer" data-gtm-allowed-actions="scroll" data-gtm-element="footer_section" id="ibpp_footer">
+<div class="footer__wrapper">
+<div class="sr-container">
+<a href="/">
+<img class="footer__brand-icon lazy-elem" data-src="https://assets.interviewbit.com/assets/ibpp/brand-inv-a62b6669d8645925b8094c7322d36b2039344b7af7a6a252a64acd867556b610.svg.gz">
+</img></a>
+<div class="footer__content">
+<div class="footer__section footer__brand-section">
+<ul class="footer__items footer__social footer__links">
+<li class="footer__item"><a href="https://www.interviewbit.com/blog/" target="_blank">Blog</a></li>
+<li class="footer__item"><a href="/discussion/" target="">Community</a></li>
+<li class="footer__item"><a href="/pages/about_us/" target="">About Us</a></li>
+<li class="footer__item"><a href="/pages/faq/" target="">FAQ</a></li>
+<li class="footer__item"><a href="/pages/contact_us/" target="">Contact Us</a></li>
+<li class="footer__item"><a href="/pages/terms/" target="">Terms</a></li>
+<li class="footer__item"><a href="/pages/privacy/" target="">Privacy Policy</a></li>
+</ul>
+<ul class="footer__icons footer__social">
+<li class="footer__icon">
+<a href="https://www.instagram.com/interview_bit/" rel="noopener" target="_blank">
+<img alt="instagram-icon" class="lazy-elem" data-image="footer-social" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/021/795/original/Instagram.png?1671197017"/>
+</a>
+</li>
+<li class="footer__icon">
+<a href="https://www.linkedin.com/company/interviewbit/" rel="noopener" target="_blank">
+<img alt="instagram-icon" class="lazy-elem" data-image="footer-social" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/021/796/original/LInkedin.png?1671197085"/>
+</a>
+</li>
+<li class="footer__icon">
+<a href="https://twitter.com/interview_bit/" rel="noopener" target="_blank">
+<img alt="instagram-icon" class="lazy-elem" data-image="footer-social" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/021/797/original/Twitter.png?1671197160"/>
+</a>
+</li>
+<li class="footer__icon">
+<a href="https://www.facebook.com/interviewbit/" rel="noopener" target="_blank">
+<img alt="instagram-icon" class="lazy-elem" data-image="footer-social" src="https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/021/936/original/facebook_icon.svg?1671443880"/>
+</a>
+</li>
+</ul>
+<ul class="footer__items footer__practice">
+<li class="m-b-10">
+<ul class="footer__col">
+<li class="footer__item">
+<a class="footer__item__link" href="/practice/"><b>Practice Questions</b></a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/programming/">Programming</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/shell/">Scripting</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/system-design/">System Design</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/databases/">Databases</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/puzzles/">Puzzle</a>
+</li>
+</ul>
+</li>
+<li class="m-b-10">
+<ul class="footer__col">
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/fast-track/"><b>Fast Track Courses</b></a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/fast-track-python/">Python</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/fast-track-java/">Java</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/fast-track-cpp/">C++</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/courses/fast-track-js/">Javascript</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footer__section footer__other-section">
+<ul class="footer__items footer__items--no-margin">
+<li class="footer__item"><b>Online Interviewbit Compilers</b></li>
+</ul>
+<ul class="footer__items footer__items--no-margin footer__interview-links">
+<li class="footer__item">
+<a class="footer__item__link" href="/online-c-compiler/">Online C Compiler</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/online-cpp-compiler/">Online C++ Compiler</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/online-java-compiler/">Online Java Compiler</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/online-javascript-compiler/">Online Javascript Compiler</a>
+</li>
+<li class="footer__item">
+<a class="footer__item__link" href="/online-python-compiler/">Online Python Compiler</a>
+</li>
+</ul>
+<br/>
+<ul class="footer__items footer__items--no-margin">
+<li class="footer__item"><b>Interview Preparation</b></li>
+</ul>
+<div class="footer-sections">
+<div class="footer-sections__section">
+<span class="footer-sections__heading">Top Interview Questions</span>
+<span class="footer-sections__title">Language, Tools &amp; Technologies</span>
+<ul class="footer-sections__item-list">
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/java-interview-questions/">
+        Java Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/sql-interview-questions/">
+        Sql Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/python-interview-questions/">
+        Python Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/javascript-interview-questions/">
+        Javascript Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/angular-interview-questions/">
+        Angular Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/networking-interview-questions/">
+        Networking Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/selenium-interview-questions/">
+        Selenium Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/data-structure-interview-questions/">
+        Data Structure Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/data-science-interview-questions/">
+        Data Science Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/system-design-interview-questions/">
+        System Design Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/hr-interview-questions/">
+        Hr Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/html-interview-questions/">
+        Html Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/c-interview-questions/">
+        C Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/technical-interview-questions/">
+        View All
+      </a>
+</li>
+</ul>
+<span class="footer-sections__title">Companies</span>
+<ul class="footer-sections__item-list">
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/amazon-interview-questions/">
+        Amazon Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/facebook-interview-questions/">
+        Facebook Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/google-interview-questions/">
+        Google Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/tcs-interview-questions/">
+        Tcs Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/accenture-interview-questions/">
+        Accenture Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/infosys-interview-questions/">
+        Infosys Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/capgemini-interview-questions/">
+        Capgemini Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/wipro-interview-questions/">
+        Wipro Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/cognizant-interview-questions/">
+        Cognizant Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/deloitte-interview-questions/">
+        Deloitte Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/zoho-interview-questions/">
+        Zoho Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/hcl-interview-questions/">
+        Hcl Interview Questions
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/technical-interview-questions/">
+        View All
+      </a>
+</li>
+</ul>
+<ul class="footer-sections__item-list">
+</ul>
+</div>
+<div class="footer-sections__section">
+<span class="footer-sections__heading">Top Articles</span>
+<ul class="footer-sections__item-list">
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/highest-paying-jobs-in-india/">
+        Highest Paying Jobs In India
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/c-projects/">
+        Exciting C Projects Ideas With Source Code
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/java-8-features/">
+        Top Java 8 Features
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/angular-vs-react/">
+        Angular Vs React
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/data-structures-and-algorithms-books/">
+        10 Best Data Structures And Algorithms Books
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/c-projects/">
+        Exciting C Projects Ideas With Source Code
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/best-full-stack-developer-courses/">
+        Best Full Stack Developer Courses
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/best-data-science-courses/">
+        Best Data Science Courses
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/python-commands/">
+        Python Commands List
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/data-scientist-salary/">
+        Data Scientist Salary
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/maximum-subarray-sum/">
+        Maximum Subarray Sum   Kadane’s Algorithm
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/blog/">
+        View All
+      </a>
+</li>
+</ul>
+</div>
+<div class="footer-sections__section">
+<span class="footer-sections__heading">Top Cheat Sheet</span>
+<ul class="footer-sections__item-list">
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/python-cheat-sheet/">
+        Python Cheat Sheet
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/cpp-cheat-sheet/">
+        C++ Cheat Sheet
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/javascript-cheat-sheet/">
+        Javascript Cheat Sheet
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/git-cheat-sheet/">
+        Git Cheat Sheet
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/java-cheat-sheet/">
+        Java Cheat Sheet
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/technical-interview-questions/">
+        View All
+      </a>
+</li>
+</ul>
+</div>
+<div class="footer-sections__section">
+<span class="footer-sections__heading">Top MCQ</span>
+<ul class="footer-sections__item-list">
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/java-mcq/">
+        Java Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/data-structure-mcq/">
+        Data Structure Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/dbms-mcq/">
+        Dbms Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/c-programming-mcq/">
+        C Programming Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/cpp-mcq/">
+        C++ Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/python-mcq/">
+        Python Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/javascript-mcq/">
+        Javascript Mcq
+      </a>
+</li>
+<li class="footer-sections__item">
+<a class="footer-sections__item-link" href="/technical-interview-questions/">
+        View All
+      </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
